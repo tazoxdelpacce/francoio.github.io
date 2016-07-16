@@ -50,6 +50,7 @@ system.time(de.19(n))
 
 * Proposer des fonctions permettant de simuler le lancer de dés à 4,5,10 ou 20 faces à partir du dé à six faces. Déterminer le nombre moyen de lancers du dé à six faces dans chacune de ces procédures.
 
+
 * Proposer une procédure de rejet permettant de simuler le lancer d'un dé à 19 faces à partir d'un dé à 20 faces. Quel est le coût du jeu dans la procédure proposée ?
 
 

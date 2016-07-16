@@ -1,0 +1,68 @@
+---
+title: "Séance de travaux dirigés 1 - Première partie"
+output: html_document
+---
+
+** **
+
+#### Questions de cours 
+
+* Rappeler la définition d'une mesure de probabilité.
+
+* Rappeler la définition d'une suite croissante d'événements.
+
+* Soit $(A_n)$ 
+une telle suite. Que peut-on dire de la suite des probabilités P$(A_n)$ ?
+
+** ** 
+
+
+#### Exercice 1
+
+##### Question 1
+
+Soit $X$ un nombre positif mesuré à l'issue d'une épreuve aléatoire. On suppose que
+$$
+\forall 0 \leq s \leq t < \infty  \, , \quad  \mbox{P} ( X \in [s,t)) = \int_s^t e^{-x} dx. 
+$$
+
+* Pour tout $t \geq 0$, montrer que P$(X \geq t) =e^{- t}$. 
+
+* Calculer P$(\sin X \geq 0)$.
+
+** **
+
+##### Question 2
+
+Soit $U$ un nombre pris au hasard dans $[0,1]$ tel que
+$$
+\forall 0 \leq a \leq b  \leq 1 \, , \quad  \mbox{P} ( U \in [a,b)) = b-a .
+$$
+
+* Pour tout $0 \leq s \leq t < \infty$,  calculer la probabilité P$(\ln(1/U) \in [s,t))$.
+
+
+* En déduire une manière d'obtenir un nombre au hasard ayant les mêmes propriétés que $X$.  
+
+** **
+
+##### Question 3
+
+Le langage R dispose de nombreux generateurs aléatoires, dont un générateur de variables aléatoires uniformément réparties sur (0,1). 
+
+
+* En utilisant le générateur aléatoire de loi uniforme **runif**, effectuer $n = 1000000$ simulations de la variable $X$.
+
+```{r}
+n = 1000000
+x <- -log(runif(n))
+```
+
+* Calculer la fréquence de l'événement $X > 1$ et comparer cette valeur empirique à la valeur théorique calculée dans la question 1. Idem pour la probabilité de l'événement $(\sin(X)>0)$. 
+
+```{r}
+mean(x > 1)
+exp(-1)
+mean(sin(x) > 0)
+```
+

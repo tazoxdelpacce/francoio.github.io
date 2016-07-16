@@ -1,0 +1,56 @@
+---
+title: "Séance de travaux dirigés 2 - Deuxième partie"
+output: html_document
+---
+
+** **
+
+
+#### Exercice 2
+
+Un jeu nécessite le lancer d'un dé équilibré à 19 faces. Pour jouer à ce jeu, on dispose uniquement d'un dé à six faces que l'on peut lancer un nombre arbitraire de fois. On définit le coût du jeu comme le nombre moyen de lancers du dé à six faces permettant d'obtenir une réalisation de loi uniforme sur l'ensemble $\{1,\dots,19 \}$.
+
+
+
+*Rappel : Théorème de la division euclidienne pour les entiers naturels*. Soit $a$ et $b$ deux entiers naturels tels que $b$ est non nul. Il existe un unique couple d'entiers naturels $(q, r)$ satisfaisant $a = bq + r$ et $r<b$. 
+
+
+##### Question 1
+
+Soit $x$ un entier compris entre 1 et 36. Montrer qu'il existe un unique couple $(q^\star, r^\star) \in \{1,\dots,6\}^2$ satisfaisant
+$$
+x = 6 q^\star +  r^\star\, .
+$$
+*Indication : Diviser $(x-1)$ par 6*. 
+
+##### Question 2
+
+On note $N_1$ et $N_2$ les résultats obtenus suivant deux lancers indépendants du dé à 6 faces. 
+
+* Montrer que la variable $X = 6(N_1 - 1) + N_2$ suit la loi uniforme sur l'ensemble $\{1,\dots,36 \}$.
+
+* Proposer une procédure de rejet permettant de simuler le lancer d'un dé à 19 faces à partir du résultat précédent. Déterminer le coût du jeu ?
+
+```{r}
+de.6 <- function(n) sample(1:6, n, replace = T)
+de.36 <- function(n) 6*(de.6(n)-1) + de.6(n)
+de.19 <- function(n){
+  d <- NULL
+  for (i in 1:n){
+    while ((x <- de.36(1)) < 20)
+    d <- c(x, d)  
+  }
+  return(x)
+}
+n = 100000
+system.time(de.19(n))
+```
+
+##### Question 3
+
+* Proposer des fonctions permettant de simuler le lancer de dés à 4,5,10 ou 20 faces à partir du dé à six faces. Déterminer le nombre moyen de lancers du dé à six faces dans chacune de ces procédures.
+
+* Proposer une procédure de rejet permettant de simuler le lancer d'un dé à 19 faces à partir d'un dé à 20 faces. Quel est le coût du jeu dans la procédure proposée ?
+
+
+* Peut on trouver une procédure de coût moindre ?

@@ -1,0 +1,79 @@
+---
+title: "Séance de travaux dirigés 2 - Première partie"
+output: html_document
+---
+
+** **
+
+#### Questions de cours 
+
+* Rappeler la définition de la loi gométrique et ses hypothèses de modélisation.
+
+* Rappeler la définition de la loi binomiale et ses hypothèses de modélisation.
+
+* Rappeler la valeur de l'espérance dans les deux cas.
+
+
+** ** 
+
+
+#### Exercice 1
+
+Dans un labyrinthe, un rat se trouve face à 4 portes dont une seule le conduit à la sortie. Il choisit une porte au hasard.  S'il ne sort pas, il est reconduit devant les 4 portes et peut faire un nouvel essai, éventuellement identique au précédent. On note $X$ le nombre d'essais nécessaires au rat pour sortir du labyrinthe.
+
+##### Question 1
+
+On observe que le rat n'a pas de mémoire. Il choisit l'une des quatre portes de façon équiprobable à chaque essai. 
+
+* Décrire la loi de la variable $X$. 
+
+* Donner l'espérance de la variable $X$.
+
+
+##### Question 2
+
+
+On observe que le rat a une mémoire parfaite. A chaque nouvel essai, il évite toutes les portes choisies précédemment et choisit au hasard de façon équiprobable parmi les restantes. 
+
+
+* Calculer les probabilités conditionnelles suivantes
+$$
+\pi_i = {\rm P}(X = i + 1 | X > i) \, , \quad i = 0, 1, 2 , 3.
+$$ 
+
+* Calculer la probabilité des événements $(X=i)$, pour tout $i = 1,\dots,4$, de maniére itérative.
+
+* Reconnaître la loi de la variable $X$ et donner son espérance.
+
+##### Question 3
+ 
+On observe que le rat se souvient uniquement du résultat de la dernière expérience  infructueuse et qu'il évite toujours la porte associée à cet essai infructueux. 
+
+* Montrer que la probabilité de l'événement $(X=1)$ est égale à $1/4$.
+
+* Pour tout $i \geq 1$, donner (sans calcul) la valeur de la probabilité conditionnelle suivante
+$$
+\rho_i = {\rm P}(X > i + 1 | X > i) .
+ $$ 
+ 
+* En déduire la probabilité de l'événement $(X=i)$ pour tout $i \geq 2$.
+
+##### Question 4
+
+Soit $Y$ une variable aléatoire de loi de Bernoulli de paramètre $3/4$ et $G$ une variable aléatoire de loi géométrique de paramètre $1/3$, indépendante de $Y$. On pose
+$$
+Z =  1 + Y G  \, .
+$$
+
+
+* Montrer que la loi de la variable aléatoire $Z$ est identique à celle de $X$.
+
+* Calculer l'espérance de $X$. 
+
+* Vérifier votre calcul à l'aide d'une simulation en R (attention, la loi geométrique dans R est décalée en zéro). 
+
+```{r}
+n = 1000000
+x <- 1 + rbinom(n,1,0.75)*(1 + rgeom(n, 1/3))
+mean(x)  
+```

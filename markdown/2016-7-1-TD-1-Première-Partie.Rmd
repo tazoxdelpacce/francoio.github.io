@@ -5,14 +5,13 @@ output: html_document
 
 ** **
 
-#### Questions de cours 
+#### [Questions de cours](http://francoio.github.io/html/CM1.html) 
 
 * Rappeler la définition d'une mesure de probabilité.
 
 * Rappeler la définition d'une suite croissante d'événements.
 
-* Soit $(A_n)$ 
-une telle suite. Que peut-on dire de la suite des probabilités P$(A_n)$ ?
+* Soit $(A_n)$ une telle suite. Que peut-on dire de la suite des probabilités P$(A_n)$ ?
 
 ** ** 
 

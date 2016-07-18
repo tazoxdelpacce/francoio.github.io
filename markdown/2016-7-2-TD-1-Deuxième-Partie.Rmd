@@ -5,15 +5,15 @@ output: html_document
 
 ** **
 
-#### Questions de cours 
+#### [Questions de cours](http://francoio.github.io/html/CM1.html) 
 
 * Soit deux événements $A$ et $B$ de probabilité non-nulle. Rappeler la définition de la probabilité conditionnelle de $A$ sachant $B$. 
 
 
-* Enoncer le *théorème des probabilités totales* et les conditions 
-  sous lesquelles il s'applique.
+* Enoncer la
+ *formule des probabilités totales* et les conditions sous lesquelles elle s'applique.
 
-* Soit $A$ un événement. On répéte une épreuve jusqu'à ce que la condition $C$ de probabilité non-nulle soit réalisée. Quelle est la probabilité de $A$ à l'issue de cette expérience ?
+* Soit $A$ un événement. On répète une épreuve jusqu'à ce que la condition $C$ de probabilité non-nulle soit réalisée. Quelle est la probabilité de l'événement $A$ à l'issue de cette expérience ?
 
 
 ** ** 
@@ -21,7 +21,7 @@ output: html_document
 
 #### Exercice 1
 
-La fonction **sample** permet de tirer des nombres au hasard (avec ou sans remise), dans un ensemble fini. Par exemple, pour simuler $n$ lancers d'un dé à 6 faces, on pourra définir la fonction suivante
+La fonction [sample](http://www.inside-r.org/r-doc/base/sample) permet de tirer des nombres au hasard (avec ou sans remise), dans un ensemble fini. Par exemple, pour simuler $n$ lancers d'un dé à 6 faces, on pourra définir la fonction suivante
 
 ```{r}
 de6 <- function(n) sample(1:6, n, replace = T)
@@ -30,7 +30,7 @@ de6 <- function(n) sample(1:6, n, replace = T)
 Deux lancers pourront donner le résultat suivant
 
 ```{r}
-de6(n = 2)
+de6(2)
 ```
 
 On considère la variable $X$ définie par le programme suivant 
@@ -70,4 +70,27 @@ Dans le championnat de basketball de l'Uhgduzstan, il y a un tirs sur trois à u
 ##### Question 3
 
 * Combien de tirs réussis doit-on attendre en moyenne avant de voir Vlad marquer à trois points ? 
+
+** **
+
+#### Exercice 4 
+
+Soient $n$ un entier non-nul et $(p_i)_{i=1,\dots, n}$ $n$ nombres positifs dont la somme totale est égale à 1.  
+
+##### Question 1
+
+* A partir d'un unique appel de la fonction [runif](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Uniform.html), écrire un algorithme qui retourne l'entier $i$ avec probabilité $p_i$. 
+
+##### Question 2
+
+* Montrer que l'algorithme proposé est correct et évaluer le nombre moyen d'opérations effectuées.
+
+** **
+
+
+
+
+
+
+
 

@@ -121,21 +121,21 @@ $(document).ready(function () {
 
 <hr />
 <div id="questions-de-cours" class="section level4">
-<h4>Questions de cours</h4>
+<h4><a href="http://francoio.github.io/html/CM1.html">Questions de cours</a></h4>
 <ul>
 <li><p>Soit deux événements <span class="math">\(A\)</span> et <span class="math">\(B\)</span> de probabilité non-nulle. Rappeler la définition de la probabilité conditionnelle de <span class="math">\(A\)</span> sachant <span class="math">\(B\)</span>.</p></li>
-<li><p>Enoncer le <em>théorème des probabilités totales</em> et les conditions sous lesquelles il s’applique.</p></li>
-<li><p>Soit <span class="math">\(A\)</span> un événement. On répéte une épreuve jusqu’à ce que la condition <span class="math">\(C\)</span> de probabilité non-nulle soit réalisée. Quelle est la probabilité de <span class="math">\(A\)</span> à l’issue de cette expérience ?</p></li>
+<li><p>Enoncer la <em>formule des probabilités totales</em> et les conditions sous lesquelles elle s’applique.</p></li>
+<li><p>Soit <span class="math">\(A\)</span> un événement. On répète une épreuve jusqu’à ce que la condition <span class="math">\(C\)</span> de probabilité non-nulle soit réalisée. Quelle est la probabilité de l’événement <span class="math">\(A\)</span> à l’issue de cette expérience ?</p></li>
 </ul>
 <hr />
 </div>
 <div id="exercice-1" class="section level4">
 <h4>Exercice 1</h4>
-<p>La fonction <strong>sample</strong> permet de tirer des nombres au hasard (avec ou sans remise), dans un ensemble fini. Par exemple, pour simuler <span class="math">\(n\)</span> lancers d’un dé à 6 faces, on pourra définir la fonction suivante</p>
+<p>La fonction <a href="http://www.inside-r.org/r-doc/base/sample">sample</a> permet de tirer des nombres au hasard (avec ou sans remise), dans un ensemble fini. Par exemple, pour simuler <span class="math">\(n\)</span> lancers d’un dé à 6 faces, on pourra définir la fonction suivante</p>
 <pre class="r"><code>de6 &lt;- function(n) sample(1:6, n, replace = T)</code></pre>
 <p>Deux lancers pourront donner le résultat suivant</p>
-<pre class="r"><code>de6(n = 2)</code></pre>
-<pre><code>## [1] 2 4</code></pre>
+<pre class="r"><code>de6(2)</code></pre>
+<pre><code>## [1] 1 3</code></pre>
 <p>On considère la variable <span class="math">\(X\)</span> définie par le programme suivant</p>
 <pre class="r"><code>n = 1000000
 x &lt;- sample(de6(n), n, replace = T)</code></pre>
@@ -145,7 +145,7 @@ x &lt;- sample(de6(n), n, replace = T)</code></pre>
 <li><p>Vérifier que le résultat de l’expérience précédente est proche de vos prédictions.</p></li>
 </ul>
 <pre class="r"><code>mean(x == 1)</code></pre>
-<pre><code>## [1] 0.166553</code></pre>
+<pre><code>## [1] 0.166598</code></pre>
 <hr />
 </div>
 <div id="exercice-2" class="section level4">
@@ -169,6 +169,24 @@ x &lt;- sample(de6(n), n, replace = T)</code></pre>
 <ul>
 <li>Combien de tirs réussis doit-on attendre en moyenne avant de voir Vlad marquer à trois points ?</li>
 </ul>
+<hr />
+</div>
+</div>
+<div id="exercice-4" class="section level4">
+<h4>Exercice 4</h4>
+<p>Soient <span class="math">\(n\)</span> un entier non-nul et <span class="math">\((p_i)_{i=1,\dots, n}\)</span> <span class="math">\(n\)</span> nombres positifs dont la somme totale est égale à 1.</p>
+<div id="question-1-1" class="section level5">
+<h5>Question 1</h5>
+<ul>
+<li>A partir d’un unique appel de la fonction <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Uniform.html">runif</a>, écrire un algorithme qui retourne l’entier <span class="math">\(i\)</span> avec probabilité <span class="math">\(p_i\)</span>.</li>
+</ul>
+</div>
+<div id="question-2-1" class="section level5">
+<h5>Question 2</h5>
+<ul>
+<li>Montrer que l’algorithme proposé est correct et évaluer le nombre moyen d’opérations effectuées.</li>
+</ul>
+<hr />
 </div>
 </div>
 

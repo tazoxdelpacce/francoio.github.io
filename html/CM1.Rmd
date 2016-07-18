@@ -1,0 +1,64 @@
+--- 
+title: "Cours Magistral 1" 
+output: html_document 
+---
+
+** ** 
+
+#### Axiome des probabilités
+
+En [théorie des probabilités](https://fr.wikipedia.org/wiki/Probabilit%C3%A9), l'ensemble des éventualités $\Omega$ est appelé l'*ensemble fondamental*. En général, on ne le décrit pas. Cet ensemble est muni d'une [tribu](https://fr.wikipedia.org/wiki/Tribu_(math%C3%A9matiques)) ${\cal A}$ contenant sous-ensembles de  $\Omega$ appelés {\it événements}.
+
+** ** 
+
+##### Mesure de probabilité 
+
+Soit $(\Omega, {\cal A})$ un ensemble fondamental muni d'une tribu. On appelle *mesure de probabilité* une 
+application, P, de ${\cal A}$ dans $[0,1]$ telle que 
+
+* P$(\Omega) = 1$
+
+* Pour toute suite $(A_i)$ d'événements mutuellement exclusifs ($A_i \cap A_j = \emptyset$, pour $i \neq j$) 
+
+$$ {\rm P}( \bigcup_{i \geq 1} A_i ) = \sum_{i \geq 1} {\rm P}(A_i) \, . $$
+
+** ** 
+
+##### Convergence monotone 
+
+Soit une suite $(A_n)$ d'événements décroissants, tels que $A_n \subset A_{n-1}$ $\subset \dots$ $\subset A_1$. Nous avons
+
+$$ {\rm P}( \bigcap_{n \geq 1} A_n ) = \lim_{n \to \infty} {\rm P}(A_n) \, . $$
+
+** ** 
+
+#### Probabilités conditionnelles et indépendance 
+
+
+##### Probabilité conditionnelle
+
+Soit $B$ un événement de probabilité P$(B) > 0$. On note P$(A|B)$ la probabilité conditionnelle de 
+$A$ sachant $B$ 
+
+$$ {\rm P}(A~|~B) = \frac{{\rm P}(A \cap B)}{{\rm P}(B)} \, . $$
+
+On dit que $A$ et $B$ sont indépendants si
+
+$$ {\rm P}(A~|~B) = {\rm P}(A) \, . $$
+
+
+** ** 
+
+##### Formule des probabilités totales
+
+Soit $(B_i)$ une suite d'événements **disjoints** formant une **partition** de $\Omega$. Nous 
+avons $$ {\rm P} (A) = \sum_{i \geq 1} {\rm P}( A ~|~ B_i) \, {\rm P}(B_i) \, . 
+$$
+
+** ** 
+
+##### Lien avec la procédure de rejet
+
+On repète une épreuve jusqu'à ce qu'une condition $C$ soit réalisée. La probabilité d'observer
+$A$ à l'issue de l'épreuve finale est $$ {\rm P}_C (A)= P(A ~|~C) \, . $$
+

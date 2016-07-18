@@ -1,0 +1,35 @@
+--- 
+title: "Cours Magistral 10"
+output: html_document 
+---
+
+** **
+
+#### Simulation de variables aléatoires
+
+
+
+##### Algorithme d'inversion
+
+Soit $F(t)$ une fonction de r\'epatitition, $u \in (0,1)$ et $F^{-1}(u) = \inf \{ t \in \mathbb{R} , \quad F(t) \geq u \}$. Soit $U$ une variable de loi uniforme sur $(0,1)$, alors
+$$
+X = F^{-1}(U) 
+$$
+est une variable aléatoire de loi de fonction de répartition $F(t)$.  
+ 
+ 
+** **
+
+
+##### Rejet
+
+Soit $f(x)$ une densité de probabilité définie sur l'intervalle $(0,1)$, nulle ailleurs, et telle que $f(x) \leq c$. L'algorithme de rejet par rapport à la loi uniforme peut s'écrire de la manière suivante 
+
+```
+while (c * runif(1) > f(x <- runif(1)))
+x
+```
+
+ 
+
+

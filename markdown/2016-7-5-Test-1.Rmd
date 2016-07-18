@@ -1,0 +1,147 @@
+---
+title: "Test 1"
+output: html_document
+---
+
+** **
+
+Le [formulaire de réponse](https://github.com/francoio/francoio.githib.io/Rmd/Formulaire-Test-1.md) à déposer dans TEIDE est disponible sur GitHub.
+
+** **
+
+#### Problème 1 
+
+Un examen comporte 10 épreuves indépendantes. Pour réussir, un candidat doit valider toutes les épreuves. Pour chaque épreuve, on suppose que la probabilité d'échec de ce candidat est $q = 0.02$.  
+
+* Calculer la probabilité pour que le candidat réussisse l'examen.  
+
+On suppose que $n = 240$ candidats, ayant des probabilités d'échec identiques au candidat précédent, se présentent indépendamment les uns des autres à l'examen.  
+
+##### Question 1
+
+* Déterminer l'espérance du nombre de candidats réussissant l'examen.
+
+** **
+
+#### Problème 2
+
+On lance 2 dés équilibrés à $n = 4$ faces, numérotés $N_1$ et $N_2$, jusqu'à ce que la condition $(N_1 \leq N_2)$ soit réalisée. On note $N$ la réalisation de la variable $N_2$ à l'issue de cette expérience. 
+  
+##### Question 2
+
+* Calculer les probabilités P($N = i$), pour tout $i$ de 1 à 4.  
+
+** **
+
+#### Problème 3 
+
+Dans un célébre jeu télévisé états-unien (*Let's Make a Deal*), un candidat se trouvait face à trois portes closes. Derrière l'une des trois portes (que nous appellerons la *bonne* porte) se trouvait un cadeau. Le candidat désignait l'une des trois portes. 
+
+Le présentateur ouvrait alors devant le candidat l'une des 2 portes non-désignées qu'il savait conduire au vide, et posait la question suivante : *souhaitez vous changer de porte* ?
+
+On note $G$ l'événement "le candidat ouvre finalement la bonne porte et gagne le jeu".
+
+##### Question 3
+
+* Calculer la probabilité de l'événement $G$ sachant que le candidat change de porte. Calculer la probabilité de l'événement $G$ sachant que le candidat conserve son choix initial.
+
+##### Question 4
+
+* Le candidat opte a priori pour une stratégie aléatoire. Il change de porte avec la probabilité $p = 1/3$. Puis il joue et gagne le jeu. Quelle est la probabilité que le candidat ait changé de porte ?   
+
+** **
+
+#### Problème 4
+
+On joue à un jeu dans lequel on tire d'abord une variable aléatoire $U$ de loi uniforme sur $(0,1)$. Indépendamment du premier tirage, on tire une variable $N$ telle que P($N=1$) = $1/2$, P($N=2$) = $1/3$ et P($N=3$) = $1/6$. Le gain à l'issue de ce jeu est égal à la variable al?atoire $X = N\times U$.
+
+```{r}
+u <- runif(1)
+n <- sample(1:3, 1, prob = c(3,2,1))
+x <- u*n
+```
+
+##### Question 5
+
+* Calculer la valeur médiane de la variable $X$.  
+
+** **
+
+#### Exercice 5
+
+Soient $X_1, X_2,\dots$ des variables indépendantes, positives, de même loi de probabilité, caractérisée par 
+$$
+\forall t > 0 , \quad {\rm P} (X > t) =  \exp(- \mu t), \quad \mu > 0 \, .
+$$
+
+
+* Montrer que la loi de la variable $Z_n = \min_{i = 1, \dots, n} X_i$ est caractérisée par
+
+$$
+\forall t > 0 , \quad {\rm P} (Z_n > t) =  \exp(- n \mu t), \quad n \geq 1.
+$$
+
+Par convention, on pose $Z_0 = 0$. Soit $N$ une variable de loi de Poisson de paramètre $\lambda = 1$ indépendante des $(X_i)$. 
+
+
+##### Question 6
+
+* Calculer la probabilité de l'événement $(Z_N > 1)$  
+
+
+** **
+
+#### Exercice 6
+
+Soit $p \in (0,1)$ ($q = 1 -p$) et $n$ un entier naturel non nul.  On considère $n=20$ archers visant une cible, chaque archers pouvant effectuer deux tirs de flèche. A chaque tir, chaque tireur atteint la cible avec la probabilité $p=2/3$. Les tirs sont indépendants les uns des autres. 
+
+
+On définit la variable aléatoire $X$ égale au nombre de joueurs ayant atteint la cible au premier tir.On définit la variable aléatoire $Z$ égale au nombre de joueurs ayant atteint la cible au premier ou au second tir.
+
+##### Question 7
+
+* Déterminer la loi de la variable $Z$. Donner son espérance.
+
+
+** ** 
+
+On définit la variable aléatoire $Y$ égale au nombre de joueurs ayant atteint la cible au second tir aprés l'avoir ratée au premier tir. 
+
+* Exprimer la relation mathématique liant la variable $Y$ aux variables $Z$ et $X$. 
+
+
+##### Question 8
+
+* Déterminer la loi de la variable $Y$. Donner son espérance.
+
+** **
+
+
+Soit $k$ un entier compris entre $0$ et $n$. 
+
+
+* Pour tout $\ell = 0, \dots,n - k$, donner (sans calcul) la probabilité conditionnelle
+$$
+\pi_{k,\ell} = {\rm P} ( Y = \ell  | X = k ) \, .
+$$
+
+* Donner l'espérance de la loi conditionnelle de la variable $Y$ sachant $X=k$, $k = 0, \dots,n$. 
+
+
+##### Question 9
+
+* Donner une relation simple liant ${\rm E}[XY]$ à l'espérance d'une fonction simple de $X$ et la valeur de cette espérance (une ligne). 
+
+** **
+
+##### Question 10
+
+* Calculer la variance de la variable aléatoire $Z$. En déduire la covariance du couple $(X,Y)$ et retrouver le résultat précédent (une ligne). 
+   
+
+
+
+
+
+
+

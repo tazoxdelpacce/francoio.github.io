@@ -1,0 +1,74 @@
+--- 
+title: "Cours Magistral 5"
+output: html_document 
+---
+
+** **
+
+#### Variables aléatoires de loi continue (et autres lois)
+
+
+##### Loi d'une variable aléatoire
+
+La loi de probabilité d'une variable aléatoire à valeurs dans $\mathbb{R}$ est caractérisée par la **fonction de répartition**
+$$
+F(t) = {\rm P}(X \leq t) \, , \quad t \in \mathbb{R} \, .
+$$
+
+La fonction de répartition est croissante de 0 à 1. On dit que la loi est **continue** si la fonction de répartition est continue sur $\mathbb{R}$. 
+
+** **
+
+##### Densité de probabilité
+
+On dit que la loi de la variable aléatoire $X$ admet la densité $f(x)$ si $f(x)$ est une fonction positive d'intégrale totale égale à 1 et telle que :
+$$
+\forall t \in \mathbb{R}, \quad F(t) = \int_{-\infty}^t f(x) dx. 
+$$ 
+
+** **
+
+##### Espérance : Théorème de transfert 
+
+Soit $X$ est une variable aléatoire de loi de densité $f(x)$, telle que la variable $Z = \varphi(X)$ est positive ou intégrable. 
+
+* Théorème de transfert 
+$$
+\mathbb{E}[Z] =  \mathbb{E}[\varphi(X)] = \int_{\mathbb{R}} \varphi(x) f(x) dx 
+$$ 
+
+* Supposons $X$ positive ou intégrable, nous avons
+
+$$
+\mathbb{E}[X] = \int_{\mathbb{R}} x f(x) dx 
+$$ 
+
+
+* Si $X$ est positive, nous avons 
+
+$$
+\mathbb{E}[X] = \int_0^{\infty} {\rm P}(X > t) dt \,.
+$$ 
+
+** **
+
+##### Loi normale centrée réduite, $N(0,1)$
+
+* La loi normale $N(0,1)$ admet pour densité
+$$
+\forall x \in \mathbb{R}, \quad f(x) = \frac{1}{\sqrt{2\pi}} \exp(- x^2/2) \, .
+$$
+
+##### Loi exponentielle de paramètre $\lambda > 0$
+
+* La loi exponentielle de paramètre $\lambda > 0$ admet pour densité
+$$
+\forall x \in \mathbb{R} , \quad f(x) = \lambda \exp(- \lambda x)  \mathbb{1}_{\mathbb{R}_+}(x) \, .
+$$
+
+ 
+
+
+
+
+

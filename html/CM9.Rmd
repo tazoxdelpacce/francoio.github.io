@@ -1,0 +1,47 @@
+--- 
+title: "Cours Magistral 9"
+output: html_document 
+---
+
+** **
+
+#### [Espérance conditionnelle](https://fr.wikipedia.org/wiki/Esp%C3%A9rance_conditionnelle)
+
+Soit $(X,Y)$ un couple de variables aléatoires réelles de densité $f(x,y)$.   
+
+#####  Espérance conditionnelle de Y sachant $X=x$ 
+
+L'espérance conditionnelle de Y sachant $X=x$ est l'espérance de la loi de densité $f_Y^{X=x} (y)$. Elle définit une fonction de la variable $x$
+
+$$
+{\rm E}[Y|X=x]  =  \varphi(x)  = \int y f_Y^{X=x} (y) dy.
+$$
+
+** **
+
+#####  Espérance conditionnelle de Y sachant $X$ 
+
+
+L'espérance conditionnelle de Y sachant $X$ est la variable aléatoire  
+
+$$
+{\rm E}[Y|X]  =   \varphi(X)
+$$
+
+
+** **
+
+
+##### Formule de conditionnement
+
+
+Nous avons 
+
+$$
+{\rm E}[Y]  = {\rm E}[ {\rm E}[Y|X] ] 
+$$
+
+** **
+
+
+

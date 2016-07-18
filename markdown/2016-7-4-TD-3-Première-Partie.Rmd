@@ -1,0 +1,45 @@
+---
+title: "Séance de travaux dirigés 3 - Première partie"
+output: html_document
+---
+
+** **
+
+
+#### Exercice 1
+
+Soit deux entiers $(m,n)$ tels que $2 \leq 2m \leq n$. On lance un dé à $2m$ faces, puis un dé à $n$ faces. On note $M$ et $N$ les numéros du premier et du second dé respectivement.  
+
+* Calculer la probabilité de l'événement $( \max \{ M, N \} \leq m )$. 
+
+* Calculer la probabilité de l'événement $(M + N \leq m)$. 
+
+
+** ** 
+
+
+#### Exercice 2
+
+Erwin a un [chat](https://fr.wikipedia.org/wiki/Chat_de_Schr%C3%B6dinger) probabiliste.  On suppose que le chat d'Erwin prend une et une seule décision par jour parmi les 4 possibilités suivantes : rester à l'intérieur de la maison, sortir à l'extérieur, rester à l'extérieur, rentrer à l'intérieur.
+
+La décision quotidienne est prise à minuit (0h00). Lorsqu'il se trouve à l'intérieur, le chat d'Erwin sort avec la probabilité $p$.  Lorsqu'il se trouve dehors, il rentre avec la probabilité $q$ ($0<p,q<1$).  Le 31 d\'ecembre 2015, considéré comme le jour zéro de l'année 2016, Erwin et son chat sont à l'intérieur de la maison.
+
+##### Question 1
+
+On note $\pi_n$ la probabilité pour que le chat soit dehors le soir $n$, $n \geq 0$. 
+
+* Etablir la relation suivante
+$$
+\forall n \geq 1, \quad \pi_n = (1 - p - q) \pi_{n-1} + p
+$$
+
+##### Question 2
+
+* Calculer $\pi_n$, ainsi que la limite de cette probabilité lorsque $n$ tend vers l'infini.
+
+** **
+
+
+
+
+

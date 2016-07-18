@@ -1,0 +1,56 @@
+--- 
+title: "Cours Magistral 8"
+output: html_document 
+---
+
+** **
+
+#### Couples de variables aléatoires 
+
+Soient $X$ et $Y$ deux variables aléatoires réelles. 
+
+#####  Densité de probabilité
+
+Soit $f(x,y)$ une fonction positive dont l'intégrale sur $\mathbb{R}^2$ est égale à 1. On dit que la loi de probabilité du couple $(X,Y)$ admet $f(x,y)$ pour densité si
+
+$$
+\forall D \subset \mathbb{R}^2 , \quad {\rm P}( (X,Y) \in D ) = \int_D f(x,y) dxdy .
+$$
+
+** **
+
+##### Loi marginale de la variable $X$
+
+La loi de la variable $X$ admet pour densité
+
+$$
+f_X(x) = \int f(x,y) dy  .
+$$
+
+
+** **
+
+
+##### Loi conditionnelle de la variable $Y$ sachant $X=x$
+
+Soit $x \in \mathbb{R}$ tel que $f_X(x) >0$. La loi conditionnelle de la variable $Y$ sachant $X = x$ admet pour densité
+
+$$
+f_Y^{X=x} (y) = \frac{f(x,y)}{f_X(x)} .
+$$
+
+
+** **
+
+##### Simulation d'un couple de variable de loi de densité $f(x,y)$ 
+
+Pour simuler $(X,Y)$ de densité $f(x,y)$, la méthode de simulation consiste à revenir à la simulation de variables unidimensionnelles 
+
+* Simuler $X$ de loi de densité $f_(x)$
+
+* Sachant $X=x$, simuler $Y$ de loi de densité $f_Y^{X=x} (y)$ 
+
+** **
+
+
+

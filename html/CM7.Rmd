@@ -1,5 +1,5 @@
 --- 
-title: "Cours Magistral 7"
+title: "Cours 7"
 output: html_document 
 ---
 
@@ -30,7 +30,7 @@ Soient $X_1, X_2, ...$ des variables de carré intégrable, indépendantes et de
 
 * Nous avons 
 $$
-\frac{1}{n} \sum_{i=1}^n \varphi(X_i) f(X_i)/g(X_i)  \to I = \int \varphi(x) f(x) dx
+\frac{1}{n} \sum_{i=1}^n \varphi(X_i) \frac{ f(X_i) }{ g(X_i) } \to I = \int \varphi(x) f(x) dx.
 $$
 
 

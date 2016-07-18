@@ -1,5 +1,5 @@
 --- 
-title: "Cours Magistral 3"
+title: "Cours 3"
 output: html_document 
 ---
 
@@ -21,7 +21,7 @@ $$
 
 #####  Variable étagée
 
-Soit $\alpha_1,\dot, \alpha_n$, $n$ **coefficients positifs** et $A_1, \dots , A_n$, $n$ événements. On appelle variable étagée, la variable  
+Soit $\alpha_1, \dots ,\alpha_n$, $n$ **coefficients positifs** et $A_1, \dots , A_n$, $n$ événements. On appelle variable étagée, la variable  
 
 $$ X = \sum_{i = 1}^n \alpha_i \, \mathbb{1}_{A_i} \, . 
 $$
@@ -43,7 +43,7 @@ $$
 \mathbb{E}[X] = \lim_{n \to \infty} \mathbb{E}[X_n].
 $$
 
-* Soit $X$ une variable aléatoire réelle. On dit que $X$ est {\bf intégrable} si $\mathbb{E}[|X|]<\infty$. Dans ce cas, nous avons
+* Soit $X$ une variable aléatoire réelle. On dit que $X$ est **intégrable** si $\mathbb{E}[|X|]<\infty$. Dans ce cas, nous avons
 
 $$
 \mathbb{E}[X] =  \mathbb{E}[\max(0,X)] - \mathbb{E}[ -\min(0,X)] \,. 

@@ -9,10 +9,6 @@ output: html_document
 
 * Rappeler la définition d'une variable aléatoire de Bernoulli, d'une variable aléatoire étagée. Quelle est l'espérance de ces variables aléatoires ? 
 
-* Rappeler la définition de la [loi de Poisson](https://fr.wikipedia.org/wiki/Loi_de_Poisson) de paramètre $\lambda >0$.
-
-* Rappeler l'espérance de la loi de Poisson.
-
 ** **
 
 
@@ -47,36 +43,7 @@ Soit $(f_n)$ la [suite de Fibonacci](https://fr.wikipedia.org/wiki/Suite_de_Fibo
 $${\rm P}( X_n = 0 ) =  f_n/2^n ,\quad n \geq 2 $$ 
 
 
-*Indication:* On appliquera la [formule des probabilités totales](https://fr.wikipedia.org/wiki/Formule_des_probabilit%C3%A9s_totales)
+*Indication :* On appliquera la [formule des probabilités totales](https://fr.wikipedia.org/wiki/Formule_des_probabilit%C3%A9s_totales)
 deux fois de suite (en prenant pour mesure de référence une mesure de probabilité conditionnelle). 
-
-** **
-
-
-#### Exercice 2
-
-Au [football](https://fr.wikipedia.org/wiki/Lois_du_jeu), on peut normalement marquer des buts de la tête ou du pied. On suppose que le nombre de buts marqués lors d'une partie est un nombre aléatoire $K$ tiré suivant la loi de Poisson de paramètre $\lambda >0$.
-
-La probabilité pour qu'un but soit marqué de la tête est $p$, $0 < p < 1$, et on suppose que les buts sont marqués indépendamment les uns des autres. 
-
-##### Question 1
-
-* Sachant que $K = k$ buts ont été marqués lors d'une partie, montrer que la probabilité conditionnelle  pour que $L = \ell$ buts soient marqués de la tête est 
-$$
-{\rm P} (L = \ell ~|~ K = k ) = \frac{k!}{\ell! (k - \ell)!} p^\ell (1 - p)^{k - \ell} , \quad \ell = 0, \dots, k
-$$
-
-##### Question 2
-
-* En déduire la probabilité que l'on observe $L = \ell$ buts marqués de la tête lors d'une partie.
-
-* Calculer l'espérance de la variable aléatoire $L$.
-
-##### Question 3
-
-En fait, le modèle est imparfait et il existe une probabilité $\epsilon>0$ pour qu'un but soit [marqué de la main](https://es.wikipedia.org/wiki/La_mano_de_Dios). 
-
-* Quelle est la probabilité d'observer au moins un but marqué de la main lors d'une partie ? 
-
 
 ** **

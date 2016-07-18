@@ -1,5 +1,5 @@
 --- 
-title: "Cours Magistral 10"
+title: "Cours 10"
 output: html_document 
 ---
 
@@ -11,7 +11,7 @@ output: html_document
 
 ##### Algorithme d'inversion
 
-Soit $F(t)$ une fonction de r\'epatitition, $u \in (0,1)$ et $F^{-1}(u) = \inf \{ t \in \mathbb{R} , \quad F(t) \geq u \}$. Soit $U$ une variable de loi uniforme sur $(0,1)$, alors
+Soit $F(t)$ une fonction de r\'epatitition, $u \in (0,1)$ et $F^{-1}(u) = \inf \{ t \in \mathbb{R}, F(t) \geq u \}$. Soit $U$ une variable de loi uniforme sur $(0,1)$, alors
 $$
 X = F^{-1}(U) 
 $$
@@ -31,5 +31,5 @@ x
 ```
 
  
-
+** **
 

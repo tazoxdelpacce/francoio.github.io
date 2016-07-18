@@ -1,5 +1,5 @@
 --- 
-title: "Cours Magistral 8"
+title: "Cours 8"
 output: html_document 
 ---
 
@@ -46,7 +46,7 @@ $$
 
 Pour simuler $(X,Y)$ de densité $f(x,y)$, la méthode de simulation consiste à revenir à la simulation de variables unidimensionnelles 
 
-* Simuler $X$ de loi de densité $f_(x)$
+* Simuler $X$ de loi de densité $f_X(x)$
 
 * Sachant $X=x$, simuler $Y$ de loi de densité $f_Y^{X=x} (y)$ 
 

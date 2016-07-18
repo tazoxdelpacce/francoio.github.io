@@ -1,5 +1,5 @@
 --- 
-title: "Cours Magistral 4"
+title: "Cours 4"
 output: html_document 
 ---
 
@@ -34,7 +34,7 @@ $$
 
 ##### Espérance : Théorème de transfert 
 
-Soit $\varphi$ une application (mesurable) de $\mathbb{N}$ dans $\mathbb{R}$ telle que $\mathbb{E}[\varphi(X)] < \infty$. 
+Soit $\varphi$ une application (mesurable) de $\mathbb{N}$ dans $\mathbb{R}$ telle que $\mathbb{E}[|\varphi(X)|] < \infty$. 
 
 * Le **théorème de transfert** s'énonce ainsi 
 $$

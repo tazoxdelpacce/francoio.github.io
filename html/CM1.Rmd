@@ -1,5 +1,5 @@
 --- 
-title: "Cours Magistral 1" 
+title: "Cours 1" 
 output: html_document 
 ---
 

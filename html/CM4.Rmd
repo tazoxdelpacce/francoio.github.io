@@ -18,7 +18,7 @@ $$
 
 ** **
 
-##### Loi de Poisson 
+##### [Loi de Poisson](https://fr.wikipedia.org/wiki/Loi_de_Poisson) 
 
 Soit $\lambda >0$. La loi de Poisson  est caractérisée par  
 $$

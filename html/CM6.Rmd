@@ -46,7 +46,7 @@ Si $X$ et $Y$ sont indépendantes, alors Cov$[X,Y] = 0$.
 
 Soit $\epsilon >0$. 
 $$
-{\rm P}( |X - {\rm E}[X]| > \epsilon ) \leq \frac{{\rm Var}[X]}{\epsilon^2}.
+{\rm P}( |X - {\rm E}[X]| > \epsilon ) \leq \frac{ {\rm Var}[X]}{\epsilon^2}.
 $$ 
 
 ** **

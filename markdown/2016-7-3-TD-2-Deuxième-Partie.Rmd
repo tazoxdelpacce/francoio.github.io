@@ -6,13 +6,13 @@ output: html_document
 ** **
 
 
-#### Exercice 2
+#### Exercice 1
 
 Un jeu nécessite le lancer d'un dé équilibré à 19 faces. Pour jouer à ce jeu, on dispose uniquement d'un dé à six faces que l'on peut lancer un nombre arbitraire de fois. On définit le coût du jeu comme le nombre moyen de lancers du dé à six faces permettant d'obtenir une réalisation de loi uniforme sur l'ensemble $\{1,\dots,19 \}$.
 
 
 
-*Rappel : Théorème de la division euclidienne pour les entiers naturels*. Soit $a$ et $b$ deux entiers naturels tels que $b$ est non nul. Il existe un unique couple d'entiers naturels $(q, r)$ satisfaisant $a = bq + r$ et $r<b$. 
+Rappel : [Théorème de la division euclidienne pour les entiers naturels](https://fr.wikipedia.org/wiki/Division_euclidienne). Soit $a$ et $b$ deux entiers naturels tels que $b$ est non nul. Il existe un unique couple d'entiers naturels $(q, r)$ satisfaisant $a = bq + r$ et $r<b$. 
 
 
 ##### Question 1

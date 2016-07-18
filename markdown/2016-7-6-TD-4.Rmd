@@ -1,0 +1,66 @@
+---
+title: "Séance de travaux dirigés 4"
+output: html_document
+---
+
+** **
+
+#### [Questions de cours](http://francoio.github.io/html/CM3.html) 
+
+* Rappeler la définition d'une variable aléatoire étagée.
+
+* Rappeler la définition d'une variable aléatoire de carré intégrable et de la [variance](https://fr.wikipedia.org/wiki/Variance_(statistiques_et_probabilit%C3%A9s)) d'une telle variable aléatoire.
+
+** **
+
+#### Exercice 1
+
+On considère $K$ intervalles ouverts $(I_k)_{k=1,\dots,K}$ inclus dans l'ensemble $(0,1)$, susceptibles de  se recouvrir de manière arbitraire. Pour tout $k=1,\dots,K$, on note $\ell_k$ la longueur de l'intervalle $I_k$. 
+
+Soit $U$ un point de l'intervalle $(0,1)$ tiré au hasard suivant la loi uniforme et $N$ le nombre d'intervalles contenant le point $U$.
+
+On suppose dans les premières questions que $K=10$ et que $\ell_k = 1/10$  pour tout $k=1,\dots,10$.
+
+** **
+
+##### Question 1
+
+* Donner une représentation graphique des $10$ intervalles, ainsi qu'une réalisation de la variable $U$ et de la variable $N$ correspondante. 
+
+* Représenter 2 situations extrêmes dans lesquelles les 10 intervalles sont soit d'intersection vide, soit d'intersection compl?te. Dans chacun des 2 cas, décrire la loi de la variable $N$. Donner son espérance et sa variance.
+
+** **
+
+##### Question 2
+
+Montrer que l'on peut écrire $N$ comme une variable étagée 
+$$
+N = \sum_{k = 1}^K \mathbb{1}_{A_k} \, , 
+$$ 
+où l'on précisera la définition des événements $(A_k)$ intervenant dans la somme. 
+
+* La loi de la variable $N$ est-elle une loi binomiale ? 
+
+* Calculer l'espérance de la variable $N$.
+
+** **
+
+##### Question 3
+
+* Montrer que la variance de la variable $N$ correspond au double de la somme des longueurs des intersections entre paire d'intervalles
+
+$$
+{\rm Var}(N) = 2\sum_{j<k} {\rm longueur}(I_j \cap I_k). 
+$$
+
+* En déduire que Var$(N) \leq 9$ et que la borne est optimale (elle est atteinte pour une configuration particulière des 10 intervalles).
+
+** **
+
+##### Question 4
+
+On suppose maintenant que $K$ est quelconque et que les longueurs $\ell_k$ sont identiques.
+
+* Calculer $\mathbb{E}[N]$ et donner une borne supérieure optimale pour la variance de $N$.
+
+* Généraliser l'exercice à la dimension 2, où l'intervalle $(0,1)$ est remplacé par le disque unité, et les intervalles $(I_k)$ sont remplacés par des disques de rayons $(r_k)$.

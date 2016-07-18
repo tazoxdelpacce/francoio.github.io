@@ -1,0 +1,73 @@
+--- 
+title: "Cours Magistral 4"
+output: html_document 
+---
+
+** **
+
+#### Variables aléatoires de loi discrète
+
+Une variable aléatoire de loi discrète est une variable aléatoire à valeurs dans un ensemble fini ou dénombrable, typiquement tout ou une partie de l'ensemble des entiers naturels, $\mathbb{N}$.
+
+
+Soit $X$ une variable aléatoire à valeurs dans $\mathbb{N}$. La loi de $X$ est caractérisée par la donnée
+$$
+{\rm P}(X = n) = p_n \, , \quad n \geq 0. 
+$$ 
+
+
+** **
+
+##### Loi de Poisson 
+
+Soit $\lambda >0$. La loi de Poisson  est caractérisée par  
+$$
+{\rm P}(X = n) = \frac{\lambda^n}{n!} e^{-\lambda} \, , \quad n \geq 0. 
+$$ 
+
+Nous avons 
+$$
+\mathbb{E}[X] = \lambda \, .
+$$
+
+** **
+
+##### Espérance : Théorème de transfert 
+
+Soit $\varphi$ une application (mesurable) de $\mathbb{N}$ dans $\mathbb{R}$ telle que $\mathbb{E}[\varphi(X)] < \infty$. 
+
+* Le **théorème de transfert** s'énonce ainsi 
+$$
+\mathbb{E}[\varphi(X)] = \sum_{n=0}^{\infty} \varphi(n) \, p_n
+$$
+
+* En particulier, nous avons 
+$$
+\mathbb{E}[X] = \sum_{n=0}^{\infty} n \, p_n
+$$ 
+
+** **
+
+##### Espérance : seconde formule
+
+De plus, nous avons 
+$$
+\mathbb{E}[X] = \sum_{n=0}^{\infty} {\rm P}(X > n)
+$$ 
+
+** **
+
+##### Espérance conditionnelle et formule de conditionnement
+
+Soit $X$ une variable aléatoire discrète et $Y$ une seconde variable aléatoire discrète. Pour tout entier naturel $k$ tel que P$(X=k)>0$, l'espérance  conditionnelle ${\rm E}[Y|X = k]$ est définie comme étant l'espérance calculée par rapport à la mesure de probabilité P($.|X=k$). 
+
+* La **Formule de conditionnement** s'obtient comme application du théorème de transfert :
+
+$$
+{\rm E}[Y] = {\rm E}[ {\rm E}[Y | X] ]  = \sum_{k=0}^{\infty} {\rm E}[Y|X = k] {\rm P}(X = k) 
+$$
+
+
+
+
+

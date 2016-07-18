@@ -7,9 +7,9 @@ output: html_document
 
 #### Questions de cours 
 
-* Rappeler la définition de la loi gométrique et ses hypothèses de modélisation.
+* Rappeler la définition de la [loi geométrique](https://fr.wikipedia.org/wiki/Loi_g%C3%A9om%C3%A9trique) et ses hypothèses de modélisation.
 
-* Rappeler la définition de la loi binomiale et ses hypothèses de modélisation.
+* Rappeler la définition de la [loi binomiale](https://fr.wikipedia.org/wiki/Loi_binomiale) et ses hypothèses de modélisation.
 
 * Rappeler la valeur de l'espérance dans les deux cas.
 
@@ -19,7 +19,7 @@ output: html_document
 
 #### Exercice 1
 
-Dans un labyrinthe, un rat se trouve face à 4 portes dont une seule le conduit à la sortie. Il choisit une porte au hasard.  S'il ne sort pas, il est reconduit devant les 4 portes et peut faire un nouvel essai, éventuellement identique au précédent. On note $X$ le nombre d'essais nécessaires au rat pour sortir du labyrinthe.
+Dans un [labyrinthe](http://www.agorat.org/articles/Rat_Behavior_and_Biology_:_Rats_et_labyrinthes), un rat se trouve face à 4 portes dont une seule le conduit à la sortie. Il choisit une porte au hasard.  S'il ne sort pas, il est reconduit devant les 4 portes et peut faire un nouvel essai, éventuellement identique au précédent. On note $X$ le nombre d'essais nécessaires au rat pour sortir du [labyrinthe](https://fr.wikipedia.org/wiki/Labyrinthe_de_Morris).
 
 ##### Question 1
 
@@ -77,3 +77,22 @@ n = 1000000
 x <- 1 + rbinom(n,1,0.75)*(1 + rgeom(n, 1/3))
 mean(x)  
 ```
+
+** **
+
+#### Exercice 2
+
+Les [shadoks](https://fr.wikipedia.org/wiki/Les_Shadoks) fabriquent des fusées qui décollent avec une probabilité égale à un sur un million. Le professeur [Shadoko](https://fr.wikipedia.org/wiki/Professeur_Shadoko) prétend qu'il suffit de faire un million d'essais pour qu'une fusée décolle. On suppose que les lancements forment des épreuves identiques et indépendantes, dans lesquelles les fusées décollent ou ne décollent pas.   
+
+* Décrire la loi du rang d'apparition du premier décollage de fusée.
+
+* Calculer la probabilité pour qu'aucune fusée ne décolle lors du premier million essais. Montrer que ce nombre est voisin de $1/e$.
+
+
+##### Et pour finir une citation 
+
+"En essayant continuellement on finit par réussir. Donc : plus ça rate, plus on a de chance que ça marche."*
+
+*Professeur Shadocko*
+
+** **

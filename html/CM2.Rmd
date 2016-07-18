@@ -1,0 +1,41 @@
+--- 
+title: "Cours Magistral 2"
+output: html_document 
+---
+
+** **
+
+#### Loi géométrique et loi binomiale
+
+
+
+##### Loi géométrique 
+
+Lors d'une suite infinie d'épreuves identiques et indépendantes, on s'intéresse à l'instant, $X$, de 
+**première occurrence** d'un événement de probabilité $p$. 
+
+* La loi de $X$ est décrite par 
+
+$$ {\rm P}(X = i) = (1 - p)^{i - 1}  \, p\, , \quad i \geq 1 \, . $$ 
+
+* Sa valeur moyenne, ou son **espérance**, est donnée par
+
+$$ {\rm E}[X] = \sum_{i = 1}^{\infty} i \, {\rm P}(X = i) = \frac 1p \, . $$
+
+** **
+
+##### Loi binomiale
+
+Lors d'une suite finie comportant $n$ épreuves identiques et indépendantes, on s'intéresse au **nombre d'occurrences**, $N$, d'un événement de probabilité $p$. 
+
+* La loi de $N$ est décrite par 
+
+$$
+{\rm P}(N = i) = \frac{n!}{i! (n-i)!} \, p^i \, (1 - p)^{n-i} \, , \quad i = 1 ,
+\dots, n \, . $$ 
+
+* Sa valeur moyenne, ou son espérance, est donnée par 
+
+$$ {\rm
+E}[N] = \sum_{i = 1}^{n} i \, {\rm P}(N = i) = n p \, . $$
+

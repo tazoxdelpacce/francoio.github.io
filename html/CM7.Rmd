@@ -1,0 +1,40 @@
+--- 
+title: "Cours Magistral 7"
+output: html_document 
+---
+
+** **
+
+#### La méthode de Monte-Carlo
+
+La [méthode de Monte-Carlo](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Monte-Carlo) permet de calculer des probabilités ou des intégrales complexes en les reformulant comme l'espérance d'une variable aléatoire. En pratique la méthode approche l'espérance cible à l'aide de la moyenne empirique de variables simulées. Elle se généralise en dimension supérieure à 1.
+
+
+** **
+
+##### Principe de la [méthode de Monte-Carlo](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Monte-Carlo) 
+
+Soient $X_1, X_2, ...$ des variables de carré intégrable, indépendantes et de même loi ayant pour densité $f(x)$. Soit $\varphi(x)$ une fonction définie sur $\mathbb{R}$ telle que l'intégrale $I$ (ci-dessous) existe.
+
+* Nous avons 
+$$
+\frac{1}{n} \sum_{i=1}^n \varphi(X_i)   \to I = \int \varphi(x) f(x) dx
+$$
+
+
+** **
+
+##### [Echantillonnage préférentiel](https://fr.wikipedia.org/wiki/%C3%89chantillonnage_pr%C3%A9f%C3%A9rentiel) 
+
+Soient $X_1, X_2, ...$ des variables de carré intégrable, indépendantes et de même loi ayant pour densité $g(x)$. Soit $\varphi(x)$ une fonction définie sur $\mathbb{R}$ telle que l'intégrale $I$ (ci-dessous) existe.
+
+* Nous avons 
+$$
+\frac{1}{n} \sum_{i=1}^n \varphi(X_i) f(X_i)/g(X_i)  \to I = \int \varphi(x) f(x) dx
+$$
+
+
+
+
+
+

@@ -40,7 +40,9 @@ $$ {\rm P}( \bigcap_{n \geq 1} A_n ) = \lim_{n \to \infty} {\rm P}(A_n) \, . $$
 Soit $B$ un événement de probabilité P$(B) > 0$. On note P$(A|B)$ la probabilité conditionnelle de 
 $A$ sachant $B$ 
 
+
 $$ {\rm P}(A~|~B) = \frac{ {\rm P}(A \cap B)}{ {\rm P}(B)} \, . $$
+
 
 On dit que $A$ et $B$ sont indépendants si
 

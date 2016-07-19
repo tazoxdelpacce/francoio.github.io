@@ -1,5 +1,5 @@
 ---
-title: "Séance de travaux dirigés 4"
+title: "Séance de travaux dirigés 5"
 output: html_document
 ---
 
@@ -33,11 +33,35 @@ $$
 {\rm P} (L = \ell ~|~ K = k ) = \frac{k!}{\ell! (k - \ell)!} p^\ell (1 - p)^{k - \ell} , \quad \ell = 0, \dots, k
 $$
 
+** **
+
+
+
 ##### Question 2
 
 * En déduire la probabilité que l'on observe $L = \ell$ buts marqués de la tête lors d'une partie.
 
 * Calculer l'espérance de la variable aléatoire $L$.
+
+** **
+
+
+##### [Les stats de la loose](http://www.lequipe.fr/Football/Actualites/Les-stats-de-la-lose/534110)
+
+On suppose que le [nombre moyen de but marqués](https://fr.wikipedia.org/wiki/Statistiques_et_records_du_championnat_de_France_de_football) par match de football est $\lambda = 2.37$. La probabilité de marquer de la tête est $p = .38$. 
+
+* Vérifier que la loi de $L$ correspond au modèle calculé dans la question précédente
+
+```{r}
+# Il y a 760 matches dans une saison régulière de ligue 1
+K <- rpois(760, lambda = 2.37)
+L <- rbinom(760, K, p = 0.38)
+plot(0:7, dpois(0:7, lambda = 0.38*2.37), xlab = "Buts de la tête", ylab = "Fréquence", col = "orange", lwd = 3, type = "l")
+points(table(L)/sum(table(L)), type = "h", col = "blue", lwd = 3)
+```
+
+
+** **
 
 ##### Question 3
 
@@ -50,7 +74,7 @@ En fait, le modèle est imparfait et il existe une probabilité $\epsilon>0$ pou
 
 #### Exercice 2
 
-Un rat se trouve dans un labyrinthe face à deux portes. Il choisit la première de ces deux portes avec probabilité 1/3 et la deuxième porte avec probabilité 2/3. Quand il choisit la première porte, il revient à son point de départ en une minute. Quand il choisit la deuxième porte, il effectue un trajet d’une minute jusqu’à un point intermédiaire, puis il rebrousse chemin avec la probabilité 1/2 (le retour lui prend alors une minute) ou il sort du labyrinthe en une minute avec la probabilité 1/2. Tous les choix du rat se font indépendamment les uns des autres.
+Un [rat](https://fr.wikipedia.org/wiki/Rat) se trouve dans un labyrinthe face à deux portes. Il choisit la première de ces deux portes avec probabilité 1/3 et la deuxième porte avec probabilité 2/3. Quand il choisit la première porte, il revient à son point de départ en une minute. Quand il choisit la deuxième porte, il effectue un trajet d’une minute jusqu’à un point intermédiaire, puis il rebrousse chemin avec la probabilité 1/2 (le retour lui prend alors une minute) ou il sort du labyrinthe en une minute avec la probabilité 1/2. Tous les choix du rat se font indépendamment les uns des autres.
 
 Soit $T$ le temps passé par le rat dans le labyrinthe. On cherche à déterminer l'espérance de $T$, puis la loi de $T$. 
 
@@ -72,9 +96,13 @@ Soit $N$ le numéro de la porte choisie au départ du rat.
 
 On note $d, i$ et $s$ les points de départ, intermédiaire et de sortie du rat, et on note $X_n$ la suite aléatoire des points visités par le rat. 
 
-* Trouver la relation entre la loi de $T$ et les probabilités conditionnelles $p_{ds}^n =$ P$(X_n = s|X_0=d)$.
+* Trouver la relation entre la loi de $T$ et les probabilités conditionnelles suivantes
 
-* Montrer par récurrence, que l'on a, la relation suivante
+$$
+p_{ds}^n = {\rm P}(X_n = s|X_0=d), \quad n \geq 0.
+$$
+
+* Montrer par récurrence que l'on a la relation suivante
 
 $$
 p_{ds}^{n+1}  = \frac13 ( p_{ds}^{n} + p_{ds}^{n-1} + 1).
@@ -85,10 +113,3 @@ $$
 
 ** ** 
 
-
-
-
-
-
-
-Soien 

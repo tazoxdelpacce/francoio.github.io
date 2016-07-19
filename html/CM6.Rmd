@@ -27,10 +27,10 @@ $$
 
 ##### Variance d'une somme
 
-Soient $X$ et $Y$ deux variables intégrables. Nous avons
+Nous avons
 
 $$
- {\rm Var}(X + Y)  =  {\rm Var}(X) +  {\rm Var}(Y) + 2{\rm Cov}[X,Y]
+ {\rm Var}[X + Y]  =  {\rm Var}[X] +  {\rm Var}[Y] + 2{\rm Cov}[X,Y]
 $$
 
 
@@ -56,7 +56,7 @@ $$
 
 Soient $X_1, X_2, ...$ sont des variables indépendantes et de même loi, alors
 $$
-{\rm P}( | \sum_i^n X_i/n - {\rm E}[X]| > \epsilon ) \to 0. 
+{\rm P}( | \frac{1}n  \sum_i^n X_i - {\rm E}[X]| > \epsilon ) \to 0. 
 $$
 
 

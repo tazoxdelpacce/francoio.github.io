@@ -1,0 +1,170 @@
+---
+title: "Séance de travaux dirigés 6"
+output: html_document
+---
+
+** **
+
+#### [Questions de cours](http://francoio.github.io/html/CM5.html) 
+
+* Rappeler la définition de la fonction de répartition d'une variable aléatoire réelle
+
+* Rappeler le théorème de transfert pour une loi continue.
+
+* Rappeler la définition de la loi exponentielle de paramètre $\lambda > 0$.
+
+
+** **
+
+
+#### Exercice 1
+
+Dans un jeu, on commence un tirage à pile ou face. Si on obtient pile, le gain, noté $X$, est une variable aléatoire $U$ de loi uniforme sur (0,1), indépendante du tirage précédent. Sinon, le gain est $2U$. La probabilité d'obtenir pile est $p = 2/3$. Pour calibrer le prix du ticket, on souhaite calculer le gain moyen et le gain médian d'un joueur donné.
+
+##### Question 1
+
+* Calculer la fonction de répartition de la variable aléatoire $X$.
+
+* Justifier que la loi de $X$ admet une densité de probabilité et décrire cette densité (sans calcul).
+
+** **
+
+##### Question 2
+
+* Calculer la valeur mediane de la variable $X$.
+
+* Calculer l'espérance de la variable aléatoire $X$.
+
+** **
+
+##### Question 3
+
+Soit $Y$ une variable aléatoire de Bernoulli de paramètre $q = 1 - p$, indépendante de $U$. 
+
+* Montrer que $X$ peut se représenter de la manière suivante
+
+$$
+X = (1 + Y)U.
+$$
+
+* En déduire la valeur de l'espérance de $X$.
+
+* Vérifier les résultats par simulation d'un grand nombre, $n$, de joueurs. 
+
+```{r}
+n = 1000000 
+y <- rbinom(n, 1, p = 1/3)
+x <- (1+y)*runif(n)
+median(x)
+mean(x)
+```
+
+
+** **
+
+#### Exercice 2
+
+Soit $U$ une variable aléatoire de loi uniforme sur l'intervalle $(0,1)$. L'objectif de cet exercice est de déterminer la fonction de répartition, la densité, l'espérance et la variance de la variable $X$ définie par 
+
+  $$  X = \sqrt{U}.$$
+  
+** **
+  
+##### Question 1
+
+* Calculer la fonction de répartition de $X$ et en déduire la densité de la loi.
+ 
+* En utilisant la densité de $X$, calculer l'espérance de $X$.
+
+* Vérifier le résultat à l'aide d'une simulation
+
+```{r}
+mean(sqrt(runif(1000000)))
+```
+
+** **
+
+##### Question 2
+
+* En utilisant la densité de la loi uniforme et le théorème de transfert, calculer l'espérance de $X$.
+ 
+* En utilisant le fait que $X$ est une variable aléatoire positive, calculer l'espérance de $X$ d'une nouvelle manière.
+
+** ** 
+
+##### Question 3
+ 
+* Déterminer la variance de $X$ sans calcul intégral.
+
+* Vérifier le résultat à l'aide d'une simulation.
+
+```{r}
+var(sqrt(runif(1000000)))
+```
+
+** **
+
+#### Exercice 3 
+
+Soient $X_1, \dots, X_n$, $n$ variables aléatoires de loi exponentielle de paramètre $\lambda>0$. L'objectif de cet exercice est de déterminer la loi et l'espérance de la variable aléatoire
+
+$$ X = \min (X_1, \dots, X_n ) .$$
+
+** **
+##### Question 1
+
+* Calculer la probabilité que la variable aléatoire $X$ soit supérieure à $t$, pour tout $t$ réel positif.
+
+** **
+
+##### Question 2
+ 
+* En déduire la fonction de répartition, puis la densité de la loi de $X$. Reconnaître cette loi.
+
+* En déduire l'espérance de la variable aléatoire $X$.
+
+** **
+
+
+#### Exercice 4 
+
+Soient $U_1, U_2, \dots, U_N$  des variables aléatoires réelles
+indépendantes de loi uniforme sur $(0,1)$ et $N$ une variable aléatoire de
+loi géométrique de paramàtre $p$ indépendante de la suite $(U_i)$. On pose 
+
+$$ X = \max_{1\leq i \leq N} U_i \; .$$
+
+** **
+
+
+##### Question 1 
+
+* Déterminer la fonction de répartition de la variable aléatoire $X$.
+
+** **
+
+##### Question 2 
+
+* Calculer l'espérance de $X$.
+
+** **
+
+##### Question 3 
+
+* Vérifier le résultat par une simulation pour $p = 1/3$.
+
+```{r}
+n <- 100000
+# La loi géometrique est décalée  
+x <- sapply(1 + rgeom(n, p = 1/3), FUN = function(i) max(runif(i))) # ?sapply : très utile
+mean(x)
+```
+
+
+
+** ** 
+
+
+
+
+

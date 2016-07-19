@@ -1,0 +1,202 @@
+---
+title: "Séance de travaux dirigés 7"
+output: html_document
+---
+
+** **
+
+#### [Questions de cours](http://francoio.github.io/html/CM6.html) 
+
+* Rappeler la définition de la variance d'une variable aléatoire.
+
+* Rappeler la définition de la loi normale.
+
+
+** **
+
+
+#### Exercice 1
+
+On souhaite calculer la variance de la [loi normale](https://fr.wikipedia.org/wiki/Loi_normale), $N(0,1)$, et d'autres moments d'ordre supérieur. 
+
+
+##### Question 1
+
+Soit $X$ une variable aléatoire de loi $N(0,1)$. 
+
+* A l'aide du théorème de transfert, montrer que la [fonction génératrice des moments](https://fr.wikipedia.org/wiki/Fonction_g%C3%A9n%C3%A9ratrice_des_moments) $\phi(t) = {\rm E}[e^{tX}]$ est égale à
+
+$$
+\phi(t)  = \exp( \frac{t^2}2 ) \, ,  \quad t \in \mathbb{R}.
+$$
+
+** **
+
+##### Question 2
+
+* Dériver la fonction $\phi(t)$ deux fois en $t = 0$. En déduire la variance de la loi normale
+
+$$
+{\rm Var}[X] = 1.
+$$
+
+** **
+
+
+##### Question 3
+
+
+* Utiliser le développement en série de la fonction $\phi(t)$ en $t = 0$ pour calculer ${\rm E}[X^4]$.
+
+* Vérifier ce résultat à l'aide de simulations.
+
+```{r}
+x <- rnorm(1000000)
+mean(x^4)
+```
+
+** **
+
+
+
+#### Exercice 2
+
+Soient $U$ et $V$ deux  variables aléatoires indépendantes de loi uniforme sur $(0,1)$. On pose
+
+$$
+  X = \mathbb{1}_{(U < 1/3)} V  +  \mathbb{1}_{(U \geq 2/3)} (1 + V).
+$$
+
+
+##### Question 1
+
+* Calculer E$[X]$ et Var$[X]$.
+
+** **
+
+##### Question 2
+
+* Déterminer la fonction de répartition de la variable aléatoire $X$.
+
+
+** ** 
+
+##### Question 3
+
+*  Prouver que les commandes suivantes simulent correctement la loi de $X$.
+
+```{r}
+n <- 100000
+N <- sample(1:3, n, replace = T)
+x <- (N == 3) + (N != 1)*runif(n)
+```
+
+* Vérifier les calculs de l'espérance et de la variance.
+
+```{r}
+mean(x)
+var(x)
+```
+
+
+** ** 
+
+#### Exercice 3
+
+Soit $U$ une variable aléatoire de loi uniforme sur $(0,1)$. On pose $X = e^U$.
+
+** **
+
+##### Question 1
+
+* Montrer que la fonction de répartition de la variable aléatoire $X$ vérifie
+$$
+\forall t \in (1, e) , \quad F(t) = \ln(t) \, . 
+$$
+
+* Décrire cette fonction pour tout $t \in \mathbb{R}$.
+
+* Montrer que la loi de la variable $X$ admet une densité et donner la densité de cette loi. 
+
+* Calculer l'espérance et la variance de la variable aléatoire $X$.
+
+** **
+
+##### Question 2
+
+Soit $s \in \mathbb{R}$, on pose 
+$$
+\phi(s) = {\rm E}[ e^{s U}] .
+$$
+
+* Calculer $\phi(s)$, puis calculer la dérivée de cette fonction au point $s = \alpha$, $\alpha >0$. 
+
+* Déduire de la question précédente la valeur de l'espérance de la variable aléatoire suivante 
+
+$$ Y = X^{\alpha} \ln(X).$$
+
+** **
+
+
+
+#### Exercice 4
+
+On considère une variable aléatoire de loi de densité
+$$
+\forall z \in \mathbb{R}, \qquad f(z) =  z \mathbb{1}_{(0,1)}(z) + \frac12 e^{1-z} \mathbb{1}_{(1,\infty)}(z)
+$$
+
+** **
+
+##### Question 1
+
+* Montrer que la fonction de répartition de la loi de densité $f(z)$ vérifie
+
+$$
+\forall t \geq 0, \quad F(t) = \frac12 \min(1,t^2) + \frac12 \max(0, 1 - e^{1 - t}) \,.
+$$
+
+
+* Soit $X$ une variable al?atoire de loi exponentielle de paramètre 1. Déterminer la fonction de répartition, $F_1(t)$, de la variable aléatoire $Y_1 = \exp(-X/2)$.
+
+** **
+
+##### Question 2
+
+* Montrer qu'il existe $p\in (0,1)$ tel que 
+
+$$
+\forall t \in \mathbb{R}, \qquad  F(t) = pF_1(t) + (1 -p)F_2(t)
+$$
+
+où $F_2(t)$ est la fonction de répartition de la variable aléatoire $Y_2 = 1 + X$. 
+
+** ** 
+
+##### Question 3
+
+Soit $p$ la valeur trouvée précédemment. On considère la variable aléatoire $Y$ définie par
+
+$$
+Y = V\sqrt{U} + (1 - V)(1+X)
+$$ 
+
+où $U$ est une variable aléatoire de loi uniforme sur (0,1), $V$ est une variable aléatoire de Bernoulli de param?tre $p$ et $U, V, X$ sont mutuellement indépendantes. 
+
+
+* Calculer l'espérance des variables aléatoires $Y$ et $Y^2$.
+
+* Calculer la fonction de répartition de la variable aléatoire $Y$.
+
+
+** **
+
+##### Question 4
+
+On dispose  d'un générateur aléatoire retournant **uniquement** des variables aléatoires indépendantes de loi exponentielle de paramètre 1. 
+
+
+* Déduire des questions précédentes un algorithme de simulation de la loi de densité $f(z)$. 
+
+On notera **rexp(n,rate = 1)** le générateur aléatoire de loi exponentielle.
+

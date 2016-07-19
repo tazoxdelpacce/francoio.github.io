@@ -1,0 +1,198 @@
+---
+title: "Séance de travaux dirigés 8"
+output: html_document
+---
+
+** **
+
+#### [Questions de cours](http://francoio.github.io/html/CM7.html) 
+
+* Rappeler le principe d'une méthode de [Monte-Carlo](https://fr.wikipedia.org/wiki/Casino_de_Monte-Carlo).
+
+
+** **
+
+##### Exercice 1
+
+Soient $(U_n)$ et $(V_n)$ deux suites de variables aléatoires de loi uniforme sur l'intervalle $[0,1]$. On suppose que ces variables aléatoires sont indépendantes dans leur ensemble. On pose 
+
+$$ \forall n \geq 1\; , \quad \left\{ 
+\begin{array}{ccl} 
+X_n &  = & 1  \quad \mbox{si      } U_n^2 + V_n^2 \leq 1 \\
+    &    & 0  \quad \mbox{sinon}
+\end{array}
+\right.
+$$
+
+et $Z_n = 4 ( X_1 + \dots + X_n )/ n$.
+
+** ** 
+
+```{r}
+n <- 1000
+u <- runif(n)
+v <- runif(n)
+plot(u, v, col = 1 +  (u^2 + v^2 > 1), pch = 19)
+```
+
+
+** **
+
+##### Question 1 
+
+* Déterminer la loi de la variable $X_n$. 
+
+* Calculer la variance de $Z_n$ et montrer que la suite $(Z_n)$ converge vers $\pi$.
+
+** ** 
+
+##### Question 2
+
+Soit $ \alpha \in (0,1)$ et $\epsilon >0$.
+
+* A l'aide de l'inégalité de Chebishev, déterminer un entier $n_0$ tel que
+
+$$ \forall n \geq n_0 \; , \quad \mbox{P}(|Z_n - \pi| > \epsilon) \leq \alpha \; .$$
+
+* Ecrire un algorithme qui retourne une valeur approchée de $\pi$ à $10^{-4}$ près, avec une probabilité supérieure à $0.95$.      
+
+```{r}
+n <- 100000 #n'est pas la valeur demandée
+u <- runif(n)
+v <- runif(n)
+4*mean(u^2 + v^2 < 1)
+```
+
+** **
+
+##### Question 3
+
+On multiplie la variable $Z_n$ par $\sqrt{n}$.
+
+* Calculer la variance de la variable $\sqrt{n}(Z_n - \pi)$. Cette variance converge-t-elle vers 0 ? Vers une constante ?
+
+* Quelle loi connue fournit une bonne approximation de la loi de $\srqt{n} (Z_n - \pi)$ ?
+
+```{r}
+rzn <- function(m=1,n=1000){
+  zn <- NULL
+  for (i in 1:m){
+    u <- runif(n)
+    v <- runif(n)
+    zn <- c(zn, 4*mean(u^2 + v^2 < 1) )
+  }
+  return(zn)
+}
+z  <- sqrt(1000)*(rzn(10000) - pi)/sqrt(pi*(4-pi))
+hist(z, prob = TRUE, col = "orange")
+```
+
+
+** ** 
+
+#### Exercice 2
+
+On considère une suite $(U_n)$ de variables aléatoires indépendantes de loi uniforme sur $(0,1)$ et la fonction
+$$
+\forall u \in (0,1), \quad \varphi (u) =    \sqrt{(1 - u) u^3} .
+$$
+
+** ** 
+
+##### Question 1
+
+Pour tout $n\geq 1$, on pose
+$$
+ Y_n = \frac1n  \sum_{i = 1}^n \varphi (U_i).
+$$
+
+* Montrer que la suite $Y_n$ converge, au sens de la loi des grands nombres, vers la limite ${\cal I}$ définie ci-dessous
+
+$$
+{\cal I} = \int_0^1   \varphi (u) du   \, .
+$$
+
+On admettra que ${\cal I} = \pi / 16$.
+
+** **
+
+##### Question 2
+
+* Calculer la variance de la variable aléatoire $Y_n$.
+
+* Soit $\epsilon = 10^{-3}$. A l'aide du théorème de Chebyshev, donner une estimation du rang $n$ à partir duquel on peut considérer que
+
+$$
+{\rm P} ( | Y_n - {\cal I}|  < \epsilon ) \geq 0.95 \, .
+$$
+
+
+** **
+
+##### Question 2
+
+On considère la loi de densité $f(v)$ définie sur l'intervalle $(0,1)$ de la manière suivante
+$$
+\forall v \in (0,1), \quad f(v) = 6 v(1 - v) .
+$$
+
+Soit $(V_n)$ une suite de variables aléatoires indépendantes, de loi de densité $f(v)$. Pour tout $n\geq 1$, on pose
+$$
+ Z_n = \frac1n  \sum_{i = 1}^n \frac{ \varphi (V_i) }{f(V_i)}.
+$$
+
+
+* Montrer que la suite $Z_n$ converge vers ${\cal I}$.
+
+* Comparer la variance de la variable aléatoire $Z_n$ à celle de la variable $Y_n$.
+
+** **
+
+##### Question 3
+
+* Proposer deux algorithmes de calcul de l'intégrale ${\cal I}$ s'appuyant sur les questions précédentes. 
+
+* Lequel vous semble le plus précis des deux pour $n$ appels du générateur aléatoire ? Justifier.
+
+```{r}
+phi <- function(u){ sqrt((1-u)*u^3)}
+# Algorithme 1
+n <- 1000000
+mean(y <- phi(runif(n)))
+pi/16
+var(y)
+
+# Algorithme 2
+n <- 1000000
+f <- function(v){dbeta(v,2,2)}
+u <- rbeta(n, 2, 2)
+mean(z <- phi(u)/f(u))
+pi/16
+var(z)
+```
+
+** ** 
+
+##### Question 4
+
+Soit $1\leq \alpha \leq 3$. On considère désormais que $f(v)$ appartient à la famille de densités $f_{\alpha}(v)$ définies sur l'intervalle $(0,1)$ de la manière suivante
+$$
+\forall v \in (0,1), \quad f_{\alpha}(v) = c_{\alpha} v^{\alpha} (1 - v) .
+$$
+(loi beta($\alpha$+1,2))
+
+
+* Montrer (ou admettre) que la constante $c_{\alpha}$ est égale à $(\alpha + 2)(\alpha +1)$.
+
+* A quel choix de $\alpha$ correspond l'algorithme de calcul de ${\cal I}$ le plus précis ? 
+
+* La précision est-elle supérieure à celle de l'algorithme s'appuyant sur la question 1) ?
+
+** **
+
+
+
+
+
+
+

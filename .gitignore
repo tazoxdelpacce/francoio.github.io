@@ -11,3 +11,4 @@ package.json
 .Rproj.user
 .Rhistory
 .RData
+makeclear.sh

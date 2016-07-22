@@ -13,3 +13,42 @@ Le [formulaire de réponse](https://github.com/francoio/francoio.githib.io/Rmd/F
 
 
 
+
+\noindent {\bf Exercice I} -  Soit $n \geq 2$ et $(U_i)_{i =1,\dots, n}$, une suite finie de variables ind\'ependantes
+de loi uniforme sur $(0,1)$. Pour tout $i = 1, \dots, n - 1$, on pose
+$$
+X_i = \left\{ \begin{array}{cl}
+1 & {\rm si ~} U_i < U_{i+1} \\
+0 & {\rm sinon.} \\
+\end{array}
+\right.
+$$
+et
+$$
+X = \sum_{i = 1}^{n-1} X_i \, .
+$$
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item[1)] D\'emontrer que ${\rm P}(U_1 < U_2) = 1/2$ et que ${\rm P}(U_1 < U_2 < U_3) = 1/6$.
+\item[2)] Calculer ${\rm E}[X]$.
+\item[3)] D\'emontrer que ${\rm Var}[X_1 + X_2] =
+{\rm Var}[X_1] + {\rm Var}[X_2]  + 2 {\rm Cov}(X_1,X_2)$ o\`u
+${\rm Cov}(X_1,X_2) = {\rm E}[X_1X_2] -  {\rm E}[X_1]{\rm E}[X_2]$.
+\item[4)] Calculer ${\rm Var}[X_1]$ et ${\rm Cov}(X_1, X_2)$. En d\'eduire la valeur de Var$[X]$ lorsque $n = 3$.
+\item[5)] Pour tout $n \geq 2$, montrer que
+$$
+{\rm Var}[X]  = \sum_{i = 1}^{n-1} {\rm Var}[X_i] + 2 \sum_{i = 1}^{n-2} {\rm Cov}(X_i, X_{i+1})
+$$
+\item[6)] Calculer ${\rm Var}[X]$ pour tout $n \geq 2$.
+\item[7)] Soit $Z$ une variable al\'eatoire r\'eelle de carr\'e int\'egrable et $\epsilon>0$. Rappeler la d\'emonstration
+de l'in\'egalit\'e suivante (in\'egalit\'e de Chebyshev)
+$$
+{\rm P}(| Z - E[Z] | > \epsilon ) \leq \frac{{\rm Var}[Z]}{\epsilon^2}
+$$
+\item[8)] Dans la suite finie $(U_i)_{i=1,\dots,n}$, on note
+$$ A_{n-1} = \frac{X}{n-1}$$
+le nombre moyen d'accroissements. Combien de tirages sont suffisants pour qu'avec une probabilit\'e sup\'erieure \`a
+0.99, $A_{n-1}$ soit proche de la valeur 1/2 \`a $10^{-2}$ pr\`es~?
+\end{itemize}

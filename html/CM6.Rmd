@@ -1,11 +1,11 @@
 --- 
-title: "Cours Magistral 6"
+title: "Cours 6"
 output: html_document 
 ---
 
 ** **
 
-#### Variance et covariance
+#### [Variance et covariance](https://francoio.github.io/)
 
 Toutes les variables considérées sont de carré intégrable.
 

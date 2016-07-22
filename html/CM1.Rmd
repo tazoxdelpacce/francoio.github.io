@@ -5,7 +5,7 @@ output: html_document
 
 ** ** 
 
-#### Axiome des probabilités
+#### [Axiome des probabilités](https://francoio.github.io/)
 
 En [théorie des probabilités](https://fr.wikipedia.org/wiki/Probabilit%C3%A9), l'ensemble des éventualités $\Omega$ est appelé l'*ensemble fondamental*. En général, on ne le décrit pas. Cet ensemble est muni d'une [tribu](https://fr.wikipedia.org/wiki/Tribu_(math%C3%A9matiques)) ${\cal A}$ contenant sous-ensembles de  $\Omega$ appelés *événements*.
 

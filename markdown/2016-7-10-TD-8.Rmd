@@ -71,7 +71,7 @@ On multiplie la variable $Z_n$ par $\sqrt{n}$.
 
 * Calculer la variance de la variable $\sqrt{n}(Z_n - \pi)$. Cette variance converge-t-elle vers 0 ? Vers une constante ?
 
-* Quelle loi connue fournit une bonne approximation de la loi de $\srqt{n} (Z_n - \pi)$ ?
+* Quelle loi connue fournit une bonne approximation de la loi de $\sqrt{n} (Z_n - \pi)$ ?
 
 ```{r}
 rzn <- function(m=1,n=1000){

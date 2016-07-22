@@ -5,7 +5,8 @@ output: html_document
 
 ** **
 
-#### Définition de l'espérance mathématique d'une variable aléatoire
+#### [Espérance d'une variable aléatoire](https://francoio.github.io/)
+
 
 ##### Variable de Bernoulli (ou variable indicatrice)
 

@@ -5,7 +5,8 @@ output: html_document
 
 ** **
 
-#### La méthode de Monte-Carlo
+#### [La méthode de Monte-Carlo](https://francoio.github.io/)
+
 
 La [méthode de Monte-Carlo](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Monte-Carlo) permet de calculer des probabilités ou des intégrales complexes en les reformulant comme l'espérance d'une variable aléatoire. En pratique la méthode approche l'espérance cible à l'aide de la moyenne empirique de variables simulées. Elle se généralise en dimension supérieure à 1.
 

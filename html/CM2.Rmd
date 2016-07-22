@@ -5,7 +5,7 @@ output: html_document
 
 ** **
 
-#### Loi géométrique et loi binomiale
+#### [Loi géométrique et loi binomiale](https://francoio.github.io/)
 
 
 

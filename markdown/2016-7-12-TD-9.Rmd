@@ -7,38 +7,166 @@ output: html_document
 
 #### [Questions de cours](http://francoio.github.io/html/CM8.html) 
 
-* Rappeler la définition de la loi d'un couple de variable aléatoires admettant une densité de probabilité 
+* Rappeler la définition de la loi d'un couple de variable aléatoires réelles admettant une densité de probabilité.
+
+* Rappeler la définition des lois marginales et conditionnelles d'un couple de variables aléatoires réelles.
+
+* Rappeler le principe de simulation d'un couple de variables aléatoires réelles.
 
 
 ** **
 
+
 ##### Exercice 1
 
+La durée d'autonomie de la batterie du portable d'Abdel est en moyenne 2.3 fois plus élevée que celle du portable de Hanneke. On suppose que les deux durées suivent une loi exponentielle et sont mutuellement indépendantes.  
+
+** **
+
+##### Question 1
+
+* Calculer la probabilité pour que le portable d'Abdel se décharge avant celui d'Hanneke. 
+
+** **
+
+
+##### Question 2
+
+* Vérifier ce résultat à l'aide d'une simulation.  
+
+```{r}
+lambda = 1.0
+mean(rexp(1000000, rate = lambda) > rexp(1000000, rate = lambda/2.3))
+```
+
+
+
+** **
+
+##### Exercice 2
+
+Hanneke et Abdel se sont donnés rendez-vous entre 19h et 20h. Leurs instants respectifs d'arrivée au point de rencontre sont deux variables aléatoires indépendantes de loi uniforme sur $(0,1)$ (unité h). Hanneke et Abdel n'aiment pas attendre, et ils quitteront le lieu de rencontre après 10 minutes d'attente infructueuse, ou après 20h.   
+
+** **
+
+##### Question 1
+
+* Calculer la probabilité pour que le rendez-vous soit réussi. 
+
+
+* Vérifier ce résultat à l'aide d'une simulation.  
+
+```{r}
+mean(abs(runif(100000) - runif(100000)) < 1/6)
+```
+
+
+** **
+
+##### Question 2
+
+* Même question lorsque la loi des instants d'arrivée est la loi [beta](https://fr.wikipedia.org/wiki/Loi_b%C3%AAta)($n$,$n$),  ($n = 4, 10, 20,\dots$).
+
+* Tracer un graphe de décrivant la probabilité de rencontre en fonction de la variance de cette loi. 
+
+** **
+
+
+##### Exercice 4
+
+Soit $U$ et $V$ deux variables aléatoires indépendantes de loi uniforme sur $(0,1)$. Le but de ce problème est de déterminer la loi de la variable aléatoire $X= UV$. 
+
+** **
+
+##### Question 1
+
+On considère le couple de variables aléatoires $(X,Y)$ = $(U, UV)$. 
+
+* Soit $x \in (0,1)$. Déterminer la densité de la loi conditionnelle de $Y$ sachant $X = x$.
+
+* Montrer que la loi du couple $(X,Y)$ admet la densité de probabilité suivante :
+
+$$
+\forall (x,y) \in \mathbb{R}^2 , \quad f(x,y) = \frac{1}x \mathbb{1}_{0<y<x<1} (x,y) 
+$$
+
+* En déduire la loi marginale de la variable $Y = UV$. 
+
+** **
+
+##### Question 2
+
+On souhaite montrer le résultat plus directement, à l'aide d'une formule de conditionnement. Soit $t \in (0,1)$.
+
+* Montrer que 
+$$
+{\rm P}(Y \leq t) =  \int_0^1 {\rm P}(V \leq t/x ) dx = t - t \ln t.
+$$
+
+* En déduire que 
+
+$$
+\forall y \in (0,1) \, , \quad f_Y(y) = - \ln(y) .
+$$
 
 
 
 
-Soit $U$ et $V$ deux variables al?atoires ind?pendantes de loi uniforme sur $(0,1)$. Le but de ce probl\`eme est de montrer que les variables al?atoires $(1 + U)\sqrt{V}$ et $U + V$ ont m?me loi (sans calculer cette loi). 
 
-\vspace{.5cm}
 
-\begin{itemize}
-\item[1)] On consid?re $X = \min (U,V)$ et $Y = \max (U,V)$. Calculer la covariance du couple $(X,Y)$. Les variables $X$ et $Y$ sont elles ind?pendantes~? (Justifier)
+
+
+
+##### Exercice 6
+
+Soit $U$ et $V$ deux variables aléatoires indépendantes de loi uniforme sur $(0,1)$. Le but de ce problème est de montrer que les variables aléatoires $(1 + U)\sqrt{V}$ et $U + V$ ont même loi, sans toutefois calculer cette loi. 
+
+** **
+
+##### Question 1
+
+On considère les variables aléatoires $X = \min (U,V)$ et $Y = \max (U,V)$. 
+
+
+* Calculer la covariance du couple $(X,Y)$. Les variables $X$ et $Y$ sont-elles indépendantes ? (Justifier)
  
-\item[2)] Soit $B$ un ensemble mesurable de $\mathbb{R}^2$. En consid?rant les ?v?nements $A = (U < V)$ et $\bar{A}$, montrer que 
-$$
-{\rm P}( (X,Y) \in B ) = 2 \int \!\!\!\! \int_B \un_{ \{0 < u < v < 1\} } du dv.  
-$$
-En d?duire que la densit? jointe du couple $(X,Y)$ est ?gale ?
-$$
-f(x,y) = 2 \un_{D} (x,y) \, ,\quad \, D = \{ (x, y) \in \mathbb{R}^2 \,, \; 0 < x < y < 1 \}. 
-$$
-\item[3)] Soit $y \in (0,1)$. Calculer la densit? de la loi de $Y$ et montrer que la loi conditionnelle de $X$ sachant $Y = y$ est uniforme sur $(0, y)$.
-\item[4)] Montrer que le couple $(X,Y)$ admet la m?me loi que le couple $(U\sqrt{V}, \sqrt{V})$. 
-\item[5)] D?duire de la question pr?c?dente que les variables al?atoires $(1 + U)\sqrt{V}$ et $U + V$ ont m?me loi.
-\item[6)] Montrer (directement) que la densit? de la variable $U + V$ est ?gale ? 
-$$
-g(z) = z \un_{(0,1)}(z) + (2 - z) \un_{(1,2)}(z)  \, , \quad z \in \mathbb{R} \, .
-$$
  
+** **
 
+
+##### Question 2
+
+Soit $B$ un sous-ensemble mesurable de $\mathbb{R}^2$. On considère l'événement $A = (U < V)$ et son complémentaire, $\bar{A}$. 
+
+* Montrer que 
+
+$$
+{\rm P}( (X,Y) \in B ) = 2 \int \!\!\!\! \int_B \mathbb{1}_{ \{0 < u < v < 1\} } du dv.  
+$$
+
+
+* En déduire que la densité jointe du couple $(X,Y)$ est égale à
+
+$$
+f(x,y) = 2 \mathbb{1}_{D} (x,y) \, ,\quad \, D = \{ (x, y) \in \mathbb{R}^2 \,, \; 0 < x < y < 1 \}. 
+$$
+
+** **
+
+##### Question 3
+
+Soit $y \in (0,1)$. 
+
+* Calculer la densité de la loi de $Y$.
+
+* Montrer que la loi conditionnelle de $X$ sachant $Y = y$ est uniforme sur $(0, y)$.
+
+* Montrer que le couple $(X,Y)$ admet la même loi que le couple $(U\sqrt{V}, \sqrt{V})$.
+
+** **
+
+##### Question 4
+
+Soit $y \in (0,1)$. 
+
+* Déduire de la question précédente que les variables aléatoires $(1 + U)\sqrt{V}$ et $U + V$ ont même loi.

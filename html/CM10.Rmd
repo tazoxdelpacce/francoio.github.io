@@ -5,7 +5,7 @@ output: html_document
 
 ** **
 
-#### Simulation de variables aléatoires
+#### [Simulation de variables aléatoires](https://francoio.github.io/)
 
 
 

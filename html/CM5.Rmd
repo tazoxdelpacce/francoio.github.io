@@ -5,7 +5,8 @@ output: html_document
 
 ** **
 
-#### Variables aléatoires de loi continue (et autres lois)
+#### [Variables aléatoires de loi continue (et autres lois)](https://francoio.github.io/)
+
 
 
 ##### Loi d'une variable aléatoire

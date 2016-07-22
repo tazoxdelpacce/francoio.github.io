@@ -121,11 +121,11 @@ $(document).ready(function () {
 
 <hr />
 <div id="esperance-conditionnelle" class="section level4">
-<h4><a href="https://fr.wikipedia.org/wiki/Esp%C3%A9rance_conditionnelle">Espérance conditionnelle</a></h4>
+<h4><a href="https://francoio.github.io/">Espérance conditionnelle</a></h4>
 <p>Soit <span class="math">\((X,Y)\)</span> un couple de variables aléatoires réelles de densité <span class="math">\(f(x,y)\)</span>.</p>
 <div id="esperance-conditionnelle-de-y-sachant-xx" class="section level5">
 <h5>Espérance conditionnelle de Y sachant <span class="math">\(X=x\)</span></h5>
-<p>L’espérance conditionnelle de Y sachant <span class="math">\(X=x\)</span> est l’espérance de la loi de densité <span class="math">\(f_Y^{X=x} (y)\)</span>. Elle définit une fonction de la variable <span class="math">\(x\)</span></p>
+<p>L’<a href="https://fr.wikipedia.org/wiki/Esp%C3%A9rance_conditionnelle">espérance conditionnelle</a> de Y sachant <span class="math">\(X=x\)</span> est l’espérance de la loi de densité <span class="math">\(f_Y^{X=x} (y)\)</span>. Elle définit une fonction de la variable <span class="math">\(x\)</span></p>
 <p><span class="math">\[
 {\rm E}[Y|X=x]  =  \varphi(x)  = \int y f_Y^{X=x} (y) dy.
 \]</span></p>
@@ -135,7 +135,7 @@ $(document).ready(function () {
 <h5>Espérance conditionnelle de Y sachant <span class="math">\(X\)</span></h5>
 <p>L’espérance conditionnelle de Y sachant <span class="math">\(X\)</span> est la variable aléatoire</p>
 <p><span class="math">\[
-{\rm E}[Y|X]  =   \varphi(X)
+{\rm E}[Y|X]  = \varphi(X) \, .
 \]</span></p>
 <hr />
 </div>
@@ -143,7 +143,7 @@ $(document).ready(function () {
 <h5>Formule de conditionnement</h5>
 <p>Nous avons</p>
 <p><span class="math">\[
-{\rm E}[Y]  = {\rm E}[ {\rm E}[Y|X] ] 
+{\rm E}[Y]  = {\rm E}[ {\rm E}[Y|X] ] = \int {\rm E}[Y|X=x] f_X(x) dx .
 \]</span></p>
 <hr />
 </div>

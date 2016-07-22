@@ -5,7 +5,8 @@ output: html_document
 
 ** **
 
-#### Couples de variables aléatoires 
+#### [Couples de variables aléatoires](https://francoio.github.io/)
+
 
 Soient $X$ et $Y$ deux variables aléatoires réelles. 
 

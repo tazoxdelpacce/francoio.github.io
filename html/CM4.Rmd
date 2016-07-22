@@ -5,7 +5,8 @@ output: html_document
 
 ** **
 
-#### Variables aléatoires de loi discrète
+#### [Variables aléatoires de loi discrète](https://francoio.github.io/)
+
 
 Une variable aléatoire de loi discrète est une variable aléatoire à valeurs dans un ensemble fini ou dénombrable, typiquement tout ou une partie de l'ensemble des entiers naturels, $\mathbb{N}$.
 

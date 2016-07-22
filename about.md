@@ -4,11 +4,19 @@ title: A propos de ce blog
 permalink: /about/
 ---
 
-Ce site contient les documents necessaires pour effectuer les travaux dirigés de probabilités appliquées à l'Ensimag (1A). Les fiches de travaux dirigés se présentent sous la forme d'un blog. Elles sont mises à jour régulièrement et peuvent peuvent être consultées en ligne. 
+Ce site contient les documents necessaires pour suivre le cours de [probabilités appliquées](http://ensimag.grenoble-inp.fr/cursus-ingenieur/probabilit-eacute-s-appliqu-eacute-es-3mmpa1-388059.kjsp), et effectuer les travaux dirigés à l'Ensimag. 
+
+Les fiches de travaux dirigés se présentent sous la forme d'un blog. Ces fiches concernent à la fois les séances de **cours en amphi**, où certains exercices seront détaillés, et les **travaux en groupe de TD**, où les solutions ne seront pas toujours détaillées. Il contient aussi les tests à remettre dans TEIDE. Les fiches de travaux dirigés sont mises à jour régulièrement. 
+
+**La présence en groupe de TD est obligatoire**.   
 
 ### Plus d'information
 
-Ce site web est écrit à aide de jekyll. Il est mis à jour grace à l'application [Rstudio](https://www.rstudio.com/). Il est vivement recommandé de télécharger cette application et de s'initier au langage de programmation [R](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr.pdf) pour suivre les Tds.  
+Ce site web est écrit à aide de jekyll est déposé sur [Github](https://github.com/francoio/francoio.github.io). Il est écrit en Rmarkdown et mis à jour grace à l'application [Rstudio](https://www.rstudio.com/). Il est vivement recommandé de télécharger l'application Rstudio et de s'initier au langage de programmation [R](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr.pdf) pour suivre les TDs.
+
+Un [polycopié au format PDF](http://membres-timc.imag.fr/Olivier.Francois/Poly_Cours_Proba.pdf)  couvre partiellement le programme de ce cours (poly non mis à jour). Seul l'amphi et les TDs couvrent l'intégralité du programme.  
+
+
 
 ### Contacter l'enseignant responsable
 

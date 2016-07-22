@@ -1,0 +1,44 @@
+---
+title: "Séance de travaux dirigés 9"
+output: html_document
+---
+
+** **
+
+#### [Questions de cours](http://francoio.github.io/html/CM8.html) 
+
+* Rappeler la définition de la loi d'un couple de variable aléatoires admettant une densité de probabilité 
+
+
+** **
+
+##### Exercice 1
+
+
+
+
+
+Soit $U$ et $V$ deux variables al?atoires ind?pendantes de loi uniforme sur $(0,1)$. Le but de ce probl\`eme est de montrer que les variables al?atoires $(1 + U)\sqrt{V}$ et $U + V$ ont m?me loi (sans calculer cette loi). 
+
+\vspace{.5cm}
+
+\begin{itemize}
+\item[1)] On consid?re $X = \min (U,V)$ et $Y = \max (U,V)$. Calculer la covariance du couple $(X,Y)$. Les variables $X$ et $Y$ sont elles ind?pendantes~? (Justifier)
+ 
+\item[2)] Soit $B$ un ensemble mesurable de $\mathbb{R}^2$. En consid?rant les ?v?nements $A = (U < V)$ et $\bar{A}$, montrer que 
+$$
+{\rm P}( (X,Y) \in B ) = 2 \int \!\!\!\! \int_B \un_{ \{0 < u < v < 1\} } du dv.  
+$$
+En d?duire que la densit? jointe du couple $(X,Y)$ est ?gale ?
+$$
+f(x,y) = 2 \un_{D} (x,y) \, ,\quad \, D = \{ (x, y) \in \mathbb{R}^2 \,, \; 0 < x < y < 1 \}. 
+$$
+\item[3)] Soit $y \in (0,1)$. Calculer la densit? de la loi de $Y$ et montrer que la loi conditionnelle de $X$ sachant $Y = y$ est uniforme sur $(0, y)$.
+\item[4)] Montrer que le couple $(X,Y)$ admet la m?me loi que le couple $(U\sqrt{V}, \sqrt{V})$. 
+\item[5)] D?duire de la question pr?c?dente que les variables al?atoires $(1 + U)\sqrt{V}$ et $U + V$ ont m?me loi.
+\item[6)] Montrer (directement) que la densit? de la variable $U + V$ est ?gale ? 
+$$
+g(z) = z \un_{(0,1)}(z) + (2 - z) \un_{(1,2)}(z)  \, , \quad z \in \mathbb{R} \, .
+$$
+ 
+

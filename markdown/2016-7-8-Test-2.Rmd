@@ -62,5 +62,4 @@ $$ A_{n-1} = \frac{Y_n }{ n-1}$$
 
 le nombre moyen d'accroissements. 
 
-
-* Combien de tirages sont suffisants pour qu'avec une probabilité supérieure à 0.99, $A_{n-1}$ soit proche de la valeur 1/2 à $10^{-2}$ près ?
+* Combien de tirages sont suffisants pour qu'avec une probabilité supérieure à 0.99, $A_{n-1}$ soit proche de la valeur 1/2 à $10^{-2}$ près 

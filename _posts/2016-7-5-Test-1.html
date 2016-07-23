@@ -120,7 +120,7 @@ $(document).ready(function () {
 
 
 <hr />
-<p><a href="https://github.com/francoio/francoio.githib.io/Rmd/Formulaire-Test-1.md">formulaire de réponse</a> sur GitHub.</p>
+<p>Le formulaire de réponse <a href="https://github.com/francoio/francoio.github.io">Formulaire-Test-1-Prénom-Nom.md</a> à compléter et à déposer dans TEIDE.</p>
 <hr />
 <div id="probleme-1" class="section level4">
 <h4>Problème 1</h4>
@@ -190,13 +190,57 @@ x &lt;- u*n</code></pre>
 <li>Montrer que la loi de la variable <span class="math">\(Z_n = \min_{i = 1, \dots, n} X_i\)</span> est caractérisée par</li>
 </ul>
 <p><span class="math">\[
-\forall t &gt; 0 , \quad {\rm P} (Z_n &gt; t) =  \exp(- n \mu t).
+\forall t &gt; 0 , \quad {\rm P} (Z_n &gt; t) =  \exp(- n \mu t), \quad n \geq 1.
 \]</span></p>
-<p>Soit <span class="math">\(N\)</span> une variable de loi de Poisson de paramètre <span class="math">\(\lambda = 1\)</span> indépendante des <span class="math">\((X_i)\)</span>.</p>
+<p>Par convention, on pose <span class="math">\(Z_0 = 0\)</span>. Soit <span class="math">\(N\)</span> une variable de loi de Poisson de paramètre <span class="math">\(\lambda = 1\)</span> indépendante des <span class="math">\((X_i)\)</span>.</p>
 <div id="question-6" class="section level5">
 <h5>Question 6</h5>
 <ul>
-<li>Calculer la probabilité pour que <span class="math">\(Z_N\)</span> soit supérieur à <span class="math">\(t = 1\)</span> (par convention, on pose <span class="math">\(Z_0 = 0\)</span>).</li>
+<li>Calculer la probabilité de l’événement <span class="math">\((Z_N &gt; 1)\)</span></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="exercice-6" class="section level4">
+<h4>Exercice 6</h4>
+<p>Soit <span class="math">\(p \in (0,1)\)</span> (<span class="math">\(q = 1 -p\)</span>) et <span class="math">\(n\)</span> un entier naturel non nul. On considère <span class="math">\(n=20\)</span> archers visant une cible, chaque archers pouvant effectuer deux tirs de flèche. A chaque tir, chaque tireur atteint la cible avec la probabilité <span class="math">\(p=2/3\)</span>. Les tirs sont indépendants les uns des autres.</p>
+<p>On définit la variable aléatoire <span class="math">\(X\)</span> égale au nombre de joueurs ayant atteint la cible au premier tir.On définit la variable aléatoire <span class="math">\(Z\)</span> égale au nombre de joueurs ayant atteint la cible au premier ou au second tir.</p>
+<div id="question-7" class="section level5">
+<h5>Question 7</h5>
+<ul>
+<li>Déterminer la loi de la variable <span class="math">\(Z\)</span>. Donner son espérance.</li>
+</ul>
+<hr />
+<p>On définit la variable aléatoire <span class="math">\(Y\)</span> égale au nombre de joueurs ayant atteint la cible au second tir aprés l’avoir ratée au premier tir.</p>
+<ul>
+<li>Exprimer la relation mathématique liant la variable <span class="math">\(Y\)</span> aux variables <span class="math">\(Z\)</span> et <span class="math">\(X\)</span>.</li>
+</ul>
+</div>
+<div id="question-8" class="section level5">
+<h5>Question 8</h5>
+<ul>
+<li>Déterminer la loi de la variable <span class="math">\(Y\)</span>. Donner son espérance.</li>
+</ul>
+<hr />
+<p>Soit <span class="math">\(k\)</span> un entier compris entre <span class="math">\(0\)</span> et <span class="math">\(n\)</span>.</p>
+<ul>
+<li><p>Pour tout <span class="math">\(\ell = 0, \dots,n - k\)</span>, donner (sans calcul) la probabilité conditionnelle <span class="math">\[
+\pi_{k,\ell} = {\rm P} ( Y = \ell  | X = k ) \, .
+\]</span></p></li>
+<li><p>Donner l’espérance de la loi conditionnelle de la variable <span class="math">\(Y\)</span> sachant <span class="math">\(X=k\)</span>, <span class="math">\(k = 0, \dots,n\)</span>.</p></li>
+</ul>
+</div>
+<div id="question-9" class="section level5">
+<h5>Question 9</h5>
+<ul>
+<li>Donner une relation simple liant <span class="math">\({\rm E}[XY]\)</span> à l’espérance d’une fonction simple de <span class="math">\(X\)</span> et la valeur de cette espérance (une ligne).</li>
+</ul>
+<hr />
+</div>
+<div id="question-10" class="section level5">
+<h5>Question 10</h5>
+<ul>
+<li>Calculer la variance de la variable aléatoire <span class="math">\(Z\)</span>. En déduire la covariance du couple <span class="math">\((X,Y)\)</span> et retrouver le résultat précédent (une ligne).</li>
 </ul>
 </div>
 </div>

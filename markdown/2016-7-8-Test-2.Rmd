@@ -5,7 +5,7 @@ output: html_document
 
 ** **
 
-Le [formulaire de réponse](https://github.com/francoio/francoio.githib.io/Rmd/Formulaire-Test-2-Prénom-Nom.md) à déposer dans TEIDE est disponible sur GitHub.
+Le formulaire de réponse [Formulaire-Test-2-Prénom-Nom.md](https://github.com/francoio/francoio.github.io) à compléter et à déposer dans TEIDE.
 
 ** **
 

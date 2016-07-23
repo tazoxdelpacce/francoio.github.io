@@ -1,0 +1,100 @@
+---
+title: "Séance de travaux dirigés 10"
+output: html_document
+---
+
+** **
+
+#### [Questions de cours](http://francoio.github.io/html/CM9.html) 
+
+* Rappeler la définition de l'espérance conditionnelle. 
+
+* Rappeler la formule de conditionnement pour des variables aléatoires de loi continue. 
+
+
+** **
+
+
+##### Exercice 1
+
+On considère une suite $(X_n)$ de variables aléatoires indépendantes de loi uniforme 
+sur $(0,1)$. Soit $a$ un nombre tel que $0<a<1$. On définit la variable aléatoire $N(a)$ de sorte que
+
+$$
+N(a) = \min \{ n \geq 1 \, , \, X_1 +\cdots + X_n > a \} .
+$$
+
+
+** **
+
+##### Question 1
+
+Soit $x \in (0,1)$. 
+
+* En discutant selon les valeurs $x > a$ ou $x \leq a$, donner une expression de l'espérance conditionnelle E$[N(a)|X_1 = x]$ ne laissant plus apparaître le conditionnement.  
+
+
+** **
+
+##### Question 2
+
+* Déduire de la question précédente que, pour tout $a \in (0,1)$, nous avons
+
+$$
+{\rm E}[N(a)] =  1 + \int_0^a E[N(x)] dx.
+$$
+
+** **
+
+##### Question 3
+
+* Résoudre l'équation précédente pour trouver l'expression de E$[N(a)]$.   
+
+** **
+
+
+##### Exercice 2
+
+On considère une suite $(U_n)_{n\geq 1}$ de variables aléatoires indépendantes 
+de loi uniforme sur $(0,1)$, et on pose $U_0 = x$, $(0<x<1)$. On dit qu'il y a record au temps $m$ si la  variable $U_m$ est plus grande que toutes les variables précédentes. On note $N_n$ le nombre de records au temps $n \geq 1$. On pose ensuite 
+$$
+\forall n \geq 1, \quad f_n(x) = E[N_n]
+$$
+
+** **
+
+##### Question 1
+
+*  Calculer $f_1(x)$.
+
+* Donner une formule reliant l'espérance conditionnelle $E[N_{n+1}|U_1 = u]$ à la fonction $f_n(x)$.
+
+
+** **
+
+
+##### Question 2
+
+* Montrer que 
+
+$$
+1 - f_{n+1}(x) = x ( 1 - f_n (x)) - \int_x^1 f_n(u) du .
+$$
+
+** **
+
+##### Question 3
+
+On suppose que $f_n(x)$ est dérivable et on appelle $g_n(x)$ sa dérivée. 
+
+* Trouver l'équation satisfaite par $g_n(x)$ puis la résoudre.
+ 
+* En déduire que 
+
+$$
+f_n (x) = h_n  - \left( x + \frac{x^2}{2} + \cdots +  \frac{x^n}{n} \right)
+$$
+
+où $h_n = \sum_{i = 1}^n 1/i$. 
+
+** **

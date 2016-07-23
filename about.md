@@ -4,11 +4,11 @@ title: A propos de ce blog
 permalink: /about/
 ---
 
-Ce site contient les documents necessaires pour suivre le cours de [probabilités appliquées](http://ensimag.grenoble-inp.fr/cursus-ingenieur/probabilit-eacute-s-appliqu-eacute-es-3mmpa1-388059.kjsp), et effectuer les travaux dirigés à l'Ensimag. 
+Ce site contient les documents nécessaires pour suivre les cours et les travaux dirigés (TD) de [probabilités appliquées de l'Ensimag](http://ensimag.grenoble-inp.fr/cursus-ingenieur/probabilit-eacute-s-appliqu-eacute-es-3mmpa1-388059.kjsp). 
 
-Les fiches de travaux dirigés se présentent sous la forme d'un blog. Ces fiches concernent à la fois les séances de **cours en amphi**, où certains exercices seront détaillés, et les **travaux en groupe de TD**, où les solutions ne seront pas toujours détaillées. Il contient aussi les tests à remettre dans TEIDE. Les fiches de travaux dirigés sont mises à jour régulièrement. 
+Les fiches concernent à la fois les séances de **cours en amphi**, où certains exercices seront détaillés, et les **travaux en groupe de TD**. Ce site contient aussi les tests à remettre dans TEIDE. 
 
-**La présence en groupe de TD est obligatoire**.   
+Les fiches de travaux dirigés sont mises à jour régulièrement. **La présence en TD est obligatoire**.   
 
 ### Plus d'information
 
@@ -18,6 +18,6 @@ Un [polycopié au format PDF](http://membres-timc.imag.fr/Olivier.Francois/Poly_
 
 
 
-### Contacter l'enseignant responsable
+### Contacter directement l'enseignant responsable
 
 [olivier.francois@grenoble-inp.fr](mailto:olivier.francois@grenoble-inp.fr)

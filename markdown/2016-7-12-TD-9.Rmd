@@ -45,13 +45,13 @@ mean(rexp(1000000, rate = lambda) > rexp(1000000, rate = lambda/2.3))
 
 ##### Exercice 2
 
-Hanneke et Abdel se sont donnés rendez-vous entre 19h et 20h. Leurs instants respectifs d'arrivée au point de rencontre sont deux variables aléatoires indépendantes de loi uniforme sur $(0,1)$ (unité h). Hanneke et Abdel n'aiment pas attendre, et ils quitteront le lieu de rencontre après 10 minutes d'attente infructueuse, ou après 20h.   
+Hanneke et Abdel se sont [donnés rendez-vous](https://www.ted.com/talks/hannah_fry_the_mathematics_of_love?language=fr) entre 19h et 20h. Leurs instants respectifs d'arrivée au point de rencontre sont deux variables aléatoires indépendantes de loi uniforme sur $(0,1)$ (unité h). Hanneke et Abdel n'aiment pas attendre, et ils quitteront le lieu de rencontre après 10 minutes d'attente infructueuse, ou après 20h.   
 
 ** **
 
 ##### Question 1
 
-* Calculer la probabilité pour que le rendez-vous soit réussi. 
+* Calculer la probabilité pour que Hanneke et Abdel se rencontrent effectivement entre 19h et 20h. 
 
 
 * Vérifier ce résultat à l'aide d'une simulation.  
@@ -70,6 +70,47 @@ mean(abs(runif(100000) - runif(100000)) < 1/6)
 * Tracer un graphe de décrivant la probabilité de rencontre en fonction de la variance de cette loi. 
 
 ** **
+
+
+##### Exercice 4
+
+Soit $X$ et $Y$ deux variables aléatoires indépendantes de loi exponentielle de paramètres respectifs $1$ et $2$. 
+
+** **
+
+##### Question 1
+
+
+* Montrer que la loi du couple $(X,Y)$ admet la densité de probabilité suivante :
+
+$$
+\forall (x,y) \in \mathbb{R}^2 , \quad f(x,y) = 2 e^{-2y-x} \mathbb{1}_{\mathbb{R}_+^2} (x,y) .
+$$
+
+
+** **
+
+##### Question 2
+
+On considère la variable aléatoire $Z = X + Y$. Soit $t \geq 0$.
+
+* Montrer que 
+$$
+{\rm P}(Z \leq t) =  (1 - e^{-t})^2 .
+$$
+
+* Calculer l'espérance de $Z$.
+
+** **
+
+##### Question 3
+
+* Calculer l'espérance de $T = XY$. 
+
+
+
+** **
+
 
 
 ##### Exercice 4
@@ -110,6 +151,8 @@ $$
 $$
 
 
+
+** **
 
 
 

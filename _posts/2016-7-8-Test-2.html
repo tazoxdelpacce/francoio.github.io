@@ -120,10 +120,35 @@ $(document).ready(function () {
 
 
 <hr />
-<p>Le <a href="https://github.com/francoio/francoio.githib.io/Rmd/Formulaire-Test-2.md">formulaire de réponse</a> à déposer dans TEIDE est disponible sur GitHub.</p>
+<p>Le <a href="https://github.com/francoio/francoio.githib.io/Rmd/Formulaire-Test-2-Prénom-Nom.md">formulaire de réponse</a> à déposer dans TEIDE est disponible sur GitHub.</p>
 <hr />
 <div id="probleme-1" class="section level4">
 <h4>Problème 1</h4>
+<p>Soient <span class="math">\(X_1 , \dots , X_n\)</span> <span class="math">\(n\)</span> variables aléatoires indépendantes et de même loi, de fonction de répartition continue sur <span class="math">\(\mathbb{R}\)</span>. Pour tout <span class="math">\(1\leq m \leq n\)</span>, on dit qu’un record est battu à l’épreuve <span class="math">\(m\)</span> si <span class="math">\(m = 1\)</span> ou si</p>
+<p><span class="math">\[
+X_m &gt; \max_{i &lt; m} X_i
+\]</span></p>
+<hr />
+<div id="question-1" class="section level5">
+<h5>Question 1</h5>
+<ul>
+<li>Calculer la probabilité de battre un record à l’épreuve <span class="math">\(m\)</span></li>
+</ul>
+<hr />
+</div>
+<div id="question-2" class="section level5">
+<h5>Question 2</h5>
+<p>Soit <span class="math">\(N\)</span> le nombre de records battus après <span class="math">\(n\)</span> épreuves.</p>
+<ul>
+<li><p>Ecrire la variable aléatoire <span class="math">\(N\)</span> comme une variable étagée.</p></li>
+<li><p>Donner l’espérance de <span class="math">\(N\)</span> pour <span class="math">\(n\)</span> quelconque.</p></li>
+<li><p>Donner l’espérance de <span class="math">\(N\)</span> pour <span class="math">\(n = 27\)</span>.</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="probleme-2" class="section level4">
+<h4>Problème 2</h4>
 <p>Soit <span class="math">\(n \geq 2\)</span> et <span class="math">\((U_i)_{i=1,\dots, n}\)</span>, une suite finie de variables indépendantes de loi uniforme sur <span class="math">\((0,1)\)</span>. Pour tout <span class="math">\(i = 1, \dots, n - 1\)</span>, on pose <span class="math">\[
 X_i = \left\{ \begin{array}{cl}
 1 &amp; {\rm si ~} U_i &lt; U_{i+1} \\
@@ -134,24 +159,24 @@ X_i = \left\{ \begin{array}{cl}
 Y_n = \sum_{i = 1}^{n-1} X_i \, .
 \]</span></p>
 <hr />
-<div id="question-1" class="section level5">
-<h5>Question 1</h5>
+<div id="question-3" class="section level5">
+<h5>Question 3</h5>
 <ul>
 <li><p>Démontrer que <span class="math">\({\rm P}(U_1 &lt; U_2) = 1/2\)</span> et que <span class="math">\({\rm P}(U_1 &lt; U_2 &lt; U_3) = 1/6\)</span>.</p></li>
 <li><p>Calculer <span class="math">\({\rm E}[Y_n]\)</span>.</p></li>
 </ul>
 <hr />
 </div>
-<div id="question-2" class="section level5">
-<h5>Question 2</h5>
+<div id="question-4" class="section level5">
+<h5>Question 4</h5>
 <ul>
 <li><p>Calculer <span class="math">\({\rm Var}[X_1]\)</span> et <span class="math">\({\rm Cov}[X_1, X_2]\)</span>.</p></li>
 <li><p>Calculer la valeur de la variance Var<span class="math">\([Y_3]\)</span>.</p></li>
 </ul>
 <hr />
 </div>
-<div id="question-3" class="section level5">
-<h5>Question 3</h5>
+<div id="question-5" class="section level5">
+<h5>Question 5</h5>
 <ul>
 <li><p>Pour tout <span class="math">\(n \geq 2\)</span>, montrer que <span class="math">\[
 {\rm Var}[X]  = \sum_{i = 1}^{n-1} {\rm Var}[X_i] + 2 \sum_{i = 1}^{n-2} {\rm Cov}[X_i, X_{i+1}].
@@ -160,14 +185,52 @@ Y_n = \sum_{i = 1}^{n-1} X_i \, .
 </ul>
 <hr />
 </div>
-<div id="question-3-1" class="section level5">
-<h5>Question 3</h5>
+<div id="question-6" class="section level5">
+<h5>Question 6</h5>
 <p>Dans la suite finie <span class="math">\((U_i)_{i=1,\dots,n}\)</span>, on note</p>
 <p><span class="math">\[ A_{n-1} = \frac{Y_n }{ n-1}\]</span></p>
 <p>le nombre moyen d’accroissements.</p>
 <ul>
-<li>Combien de tirages sont suffisants pour qu’avec une probabilité supérieure à 0.99, <span class="math">\(A_{n-1}\)</span> soit proche de la valeur 1/2 à <span class="math">\(10^{-2}\)</span> près</li>
+<li>Combien de tirages suffisent pour qu’avec une probabilité supérieure à 0.99, <span class="math">\(A_{n-1}\)</span> soit proche de la valeur 1/2 à <span class="math">\(10^{-2}\)</span> près.</li>
 </ul>
+<hr />
+</div>
+</div>
+<div id="probleme-3" class="section level4">
+<h4>Problème 3</h4>
+<p>On considère un couple <span class="math">\((X,Y)\)</span> de variables aléatoires de densité jointe</p>
+<p><span class="math">\[
+\forall (x,y) \in \mathbb{R}^2 \, , \quad f(x,y) = c xy^2 \mathbb{1}_D (x,y) \, ,
+\]</span></p>
+<p>où <span class="math">\(c\)</span> est une constante positive et <span class="math">\(D\)</span> = <span class="math">\(\{ (x,y) \in \mathbb{R}^2 \; ; \; 0 &lt; x &lt; y &lt; 1\}\)</span> .</p>
+<hr />
+<div id="question-7" class="section level5">
+<h5>Question 7</h5>
+<ul>
+<li>Déterminer la valeur de <span class="math">\(c\)</span>.</li>
+</ul>
+<hr />
+</div>
+<div id="question-8" class="section level5">
+<h5>Question 8</h5>
+<ul>
+<li>Déterminer la fonction de répartition de la variable <span class="math">\(Y\)</span>. Donner sa valeur au point <span class="math">\(t = 2/3\)</span>.</li>
+</ul>
+<hr />
+</div>
+<div id="question-9" class="section level5">
+<h5>Question 9</h5>
+<ul>
+<li>Ecrire un algorithme de simulation d’un couple de densité <span class="math">\(f(x,y)\)</span>.</li>
+</ul>
+<hr />
+</div>
+<div id="question-10" class="section level5">
+<h5>Question 10</h5>
+<ul>
+<li>On pose <span class="math">\(Z = X Y\)</span>. Déterminer la densité de la loi de la variable <span class="math">\(Z\)</span>.</li>
+</ul>
+<hr />
 </div>
 </div>
 

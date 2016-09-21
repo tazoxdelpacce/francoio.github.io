@@ -11,7 +11,7 @@ output: html_document
 
 
 * Enoncer la
- *formule des probabilités totales* et les conditions sous lesquelles elle s'applique.
+*formule des probabilités totales* et les conditions sous lesquelles elle s'applique.
 
 * Soit $A$ un événement. On répète une épreuve jusqu'à ce que la condition $C$ de probabilité non-nulle soit réalisée. Quelle est la probabilité de l'événement $A$ à l'issue de cette expérience ?
 
@@ -21,7 +21,7 @@ output: html_document
 
 #### Exercice 1
 
-La fonction [sample](http://www.inside-r.org/r-doc/base/sample) permet de tirer des nombres au hasard (avec ou sans remise), dans un ensemble fini. Par exemple, pour simuler $n$ lancers d'un dé à 6 faces, on pourra définir la fonction suivante
+La fonction [sample](https://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html) permet de tirer des nombres au hasard (avec ou sans remise), dans un ensemble fini. Par exemple, pour simuler $n$ lancers d'un dé à 6 faces, on pourra définir la fonction suivante
 
 ```{r}
 de6 <- function(n) sample(1:6, n, replace = T)
@@ -36,8 +36,8 @@ de6(2)
 On considère la variable $X$ définie par le programme suivant 
 
 ```{r}
-n = 1000000
-x <- sample(de6(n), n, replace = T)
+n = 1
+x <- sample(1:de6(1), 1, replace = T)
 ```
 
 * Calculer la probabilité P$(X = 6)$.
@@ -47,6 +47,7 @@ x <- sample(de6(n), n, replace = T)
 * Vérifier que le résultat de l'expérience précédente est proche de vos prédictions.
 
 ```{r}
+for (i in 1:99999) x <- c(x,sample(1:de6(1), 1, replace = T))
 mean(x == 1)
 ```
 

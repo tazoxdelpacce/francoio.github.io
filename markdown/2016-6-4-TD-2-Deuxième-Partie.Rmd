@@ -19,7 +19,7 @@ Rappel : [Théorème de la division euclidienne pour les entiers naturels](https
 
 Soit $x$ un entier compris entre 1 et 36. Montrer qu'il existe un unique couple $(q^\star, r^\star) \in \{1,\dots,6\}^2$ satisfaisant
 $$
-x = 6 q^\star +  r^\star\, .
+x = 6 (q^\star - 1) +  r^\star\, .
 $$
 *Indication : Diviser $(x-1)$ par 6*. 
 

@@ -127,7 +127,7 @@ $(document).ready(function () {
 <div id="question-1" class="section level5">
 <h5>Question 1</h5>
 <p>Soit <span class="math">\(x\)</span> un entier compris entre 1 et 36. Montrer qu’il existe un unique couple <span class="math">\((q^\star, r^\star) \in \{1,\dots,6\}^2\)</span> satisfaisant <span class="math">\[
-x = 6 q^\star +  r^\star\, .
+x = 6 (q^\star - 1) +  r^\star\, .
 \]</span> <em>Indication : Diviser <span class="math">\((x-1)\)</span> par 6</em>.</p>
 </div>
 <div id="question-2" class="section level5">
@@ -150,7 +150,7 @@ de.19 &lt;- function(n){
 n = 100000
 system.time(de.19(n))</code></pre>
 <pre><code>##    user  system elapsed 
-##  35.330   1.459  36.935</code></pre>
+##  35.497   1.555  37.117</code></pre>
 </div>
 <div id="question-3" class="section level5">
 <h5>Question 3</h5>

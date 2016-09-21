@@ -131,21 +131,22 @@ $(document).ready(function () {
 </div>
 <div id="exercice-1" class="section level4">
 <h4>Exercice 1</h4>
-<p>La fonction <a href="http://www.inside-r.org/r-doc/base/sample">sample</a> permet de tirer des nombres au hasard (avec ou sans remise), dans un ensemble fini. Par exemple, pour simuler <span class="math">\(n\)</span> lancers d’un dé à 6 faces, on pourra définir la fonction suivante</p>
+<p>La fonction <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html">sample</a> permet de tirer des nombres au hasard (avec ou sans remise), dans un ensemble fini. Par exemple, pour simuler <span class="math">\(n\)</span> lancers d’un dé à 6 faces, on pourra définir la fonction suivante</p>
 <pre class="r"><code>de6 &lt;- function(n) sample(1:6, n, replace = T)</code></pre>
 <p>Deux lancers pourront donner le résultat suivant</p>
 <pre class="r"><code>de6(2)</code></pre>
-<pre><code>## [1] 4 3</code></pre>
+<pre><code>## [1] 6 4</code></pre>
 <p>On considère la variable <span class="math">\(X\)</span> définie par le programme suivant</p>
-<pre class="r"><code>n = 1000000
-x &lt;- sample(de6(n), n, replace = T)</code></pre>
+<pre class="r"><code>n = 1
+x &lt;- sample(1:de6(1), 1, replace = T)</code></pre>
 <ul>
 <li><p>Calculer la probabilité P<span class="math">\((X = 6)\)</span>.</p></li>
 <li><p>Calculer la probabilité P<span class="math">\((X = 1)\)</span>.</p></li>
 <li><p>Vérifier que le résultat de l’expérience précédente est proche de vos prédictions.</p></li>
 </ul>
-<pre class="r"><code>mean(x == 1)</code></pre>
-<pre><code>## [1] 0.166169</code></pre>
+<pre class="r"><code>for (i in 1:99999) x &lt;- c(x,sample(1:de6(1), 1, replace = T))
+mean(x == 1)</code></pre>
+<pre><code>## [1] 0.40947</code></pre>
 <hr />
 </div>
 <div id="exercice-2" class="section level4">

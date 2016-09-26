@@ -1,6 +1,6 @@
 ---
 title: "Formulaire de réponse pour le test 1"
-output: pdf_document
+output: html_document
 ---
 
 ** **
@@ -13,7 +13,7 @@ output: pdf_document
 
 * Déterminer l'espérance du nombre de candidats réussissant l'examen.
 
-###### Réponse : 
+###### Réponse : 42
 
 ** **
 

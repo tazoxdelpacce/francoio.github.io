@@ -40,10 +40,14 @@ de.19 <- function(n){
     while ((x <- de.36(1)) < 20)
     d <- c(x, d)  
   }
-  return(x)
+  return(d)
 }
 n = 100000
-system.time(de.19(n))
+
+# Temps de calcul 
+system.time(x.19 <- de.19(n))
+# Histogramme des résultats
+plot(table(x.19))
 ```
 
 ##### Question 3

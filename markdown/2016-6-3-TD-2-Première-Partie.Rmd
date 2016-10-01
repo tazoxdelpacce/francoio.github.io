@@ -5,7 +5,7 @@ output: html_document
 
 ** **
 
-#### Questions de cours 
+#### [Questions de cours](http://francoio.github.io/html/CM2.html) 
 
 * Rappeler la définition de la [loi geométrique](https://fr.wikipedia.org/wiki/Loi_g%C3%A9om%C3%A9trique) et ses hypothèses de modélisation.
 

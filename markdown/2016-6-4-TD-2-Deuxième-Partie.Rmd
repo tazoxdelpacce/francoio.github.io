@@ -37,7 +37,7 @@ de.36 <- function(n) 6*(de.6(n)-1) + de.6(n)
 de.19 <- function(n){
   d <- NULL
   for (i in 1:n){
-    while ((x <- de.36(1)) < 20)
+    while ((x <- de.36(1)) > 19){}
     d <- c(x, d)  
   }
   return(d)

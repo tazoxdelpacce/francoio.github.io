@@ -67,7 +67,7 @@ x <- u*n
 
 ** **
 
-#### Exercice 5
+#### Problème 5
 
 Soient $X_1, X_2,\dots$ des variables indépendantes, positives, de même loi de probabilité, caractérisée par 
 $$
@@ -91,12 +91,12 @@ Par convention, on pose $Z_0 = 0$. Soit $N$ une variable de loi de Poisson de pa
 
 ** **
 
-#### Exercice 6
+#### Problème 6
 
 Soit $p \in (0,1)$ ($q = 1 -p$) et $n$ un entier naturel non nul.  On considère $n=20$ archers visant une cible, chaque archers pouvant effectuer deux tirs de flèche. A chaque tir, chaque tireur atteint la cible avec la probabilité $p=2/3$. Les tirs sont indépendants les uns des autres. 
 
 
-On définit la variable aléatoire $X$ égale au nombre de joueurs ayant atteint la cible au premier tir.On définit la variable aléatoire $Z$ égale au nombre de joueurs ayant atteint la cible au premier ou au second tir.
+On définit la variable aléatoire $X$ égale au nombre de joueurs ayant atteint la cible au premier tir. On définit la variable aléatoire $Z$ égale au nombre de joueurs ayant atteint la cible au premier ou au second tir.
 
 ##### Question 7
 
@@ -105,7 +105,7 @@ On définit la variable aléatoire $X$ égale au nombre de joueurs ayant atteint
 
 ** ** 
 
-On définit la variable aléatoire $Y$ égale au nombre de joueurs ayant atteint la cible au second tir aprés l'avoir ratée au premier tir. 
+On définit la variable aléatoire $Y$ égale au nombre de joueurs ayant atteint la cible au second tir après l'avoir ratée au premier tir. 
 
 * Exprimer la relation mathématique liant la variable $Y$ aux variables $Z$ et $X$. 
 

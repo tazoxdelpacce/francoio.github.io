@@ -129,7 +129,7 @@ $$
 
 ** **
 
-##### Question 2
+##### Question 3
 
 On considère la loi de densité $f(v)$ définie sur l'intervalle $(0,1)$ de la manière suivante
 $$
@@ -148,7 +148,7 @@ $$
 
 ** **
 
-##### Question 3
+##### Question 4
 
 * Proposer deux algorithmes de calcul de l'intégrale ${\cal I}$ s'appuyant sur les questions précédentes. 
 
@@ -173,7 +173,7 @@ var(z)
 
 ** ** 
 
-##### Question 4
+##### Question 5
 
 Soit $1\leq \alpha \leq 3$. On considère désormais que $f(v)$ appartient à la famille de densités $f_{\alpha}(v)$ définies sur l'intervalle $(0,1)$ de la manière suivante
 $$

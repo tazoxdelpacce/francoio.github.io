@@ -1,6 +1,6 @@
 ---
 title: "Séance de travaux dirigés 8"
-output: html_document
+output: pdf_document
 ---
 
 ** **
@@ -48,7 +48,7 @@ plot(u, v, col = 1 +  (u^2 + v^2 > 1), pch = 19)
 
 ##### Question 2
 
-Soit $ \alpha \in (0,1)$ et $\epsilon >0$.
+Soit $\alpha \in (0,1)$ et $\epsilon >0$.
 
 * A l'aide de l'inégalité de Chebishev, déterminer un entier $n_0$ tel que
 

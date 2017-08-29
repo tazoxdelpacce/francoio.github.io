@@ -1,6 +1,6 @@
 ---
 title: "Séance de travaux dirigés 9"
-output: html_document
+output: pdf_document
 ---
 
 ** **

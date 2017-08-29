@@ -13,7 +13,7 @@ output: html_document
 
 * Déterminer l'espérance du nombre de candidats réussissant l'examen.
 
-###### Réponse : 42
+###### Réponse : 
 
 ** **
 

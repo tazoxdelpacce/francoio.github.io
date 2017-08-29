@@ -106,7 +106,7 @@ var(sqrt(runif(1000000)))
 
 #### Exercice 3 
 
-Soient $X_1, \dots, X_n$, $n$ variables aléatoires de loi exponentielle de paramètre $\lambda>0$. L'objectif de cet exercice est de déterminer la loi et l'espérance de la variable aléatoire
+Soient $X_1, \dots, X_n$, $n$ variables aléatoires indépendantes de loi exponentielle de paramètre $\lambda>0$. L'objectif de cet exercice est de déterminer la loi et l'espérance de la variable aléatoire
 
 $$ X = \min (X_1, \dots, X_n ) .$$
 

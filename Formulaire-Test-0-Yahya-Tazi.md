@@ -16,6 +16,8 @@ output: pdf_document
 * Déterminer la probabilité de l'événement $(N_E > k)$, pour tout $k \geq 1$. Quelle est la loi de $N_E$ ?
 
 ###### Réponse : 
+* p(Ne>k)=![](https://latex.codecogs.com/gif.latex?%5Cleft%20%28%20%5Cfrac%7B5%7D%7B6%7D%20%5Cright%20%29%5E%7Bk%7D)
+* Ne suit une loi géométrique: p(Ne=k+1)=![](https://latex.codecogs.com/gif.latex?%5Cleft%20%28%20%5Cfrac%7B5%7D%7B6%7D%20%5Cright%20%29%5E%7Bk%7D%5Cfrac%7B1%7D%7B6%7D)
 
 
 ##### Question 2
@@ -23,12 +25,15 @@ output: pdf_document
 * Calculer la probabilité de l'événement $(N > k)$, pour tout $k \geq 1$. Quelle est la loi de $N$ ?
 
 ###### Réponse :
+* p(N>k)=![](https://latex.codecogs.com/gif.latex?%5Cleft%20%28%20%5Cfrac%7B5%7D%7B6%7D%20%5Cright%20%29%5E%7Bk%7D&plus;%5Cleft%20%28%20%5Cfrac%7B6%7D%7B7%7D%20%5Cright%20%29%5E%7Bk%7D-%5Cleft%20%28%20%5Cfrac%7B5%7D%7B7%7D%20%5Cright%20%29%5E%7Bk%7D)
 
 ##### Question 3
 
 * Quelle est la probabilité pour que Eva gagne ? 
 
-###### Réponse : 
+###### Réponse :
+
+* 0,5
 
 
 ##### Question 4
@@ -37,13 +42,17 @@ output: pdf_document
 
 
 ###### Réponse : 
+* 1/12=0,0833333333333333
 
 ##### Question 5
 
 * Calculer la probabilité que la partie a duré moins de 3 manches sachant qu'Eva a gagné.
 
 
-###### Réponse : 
+###### Réponse :
+
+* 109/343 = 0,3177842565597668
+
 
 
 ** **
@@ -58,12 +67,16 @@ output: pdf_document
 
 ###### Réponse : 
 
+* 1/6 = 0,1666666666666667
+
   
 ##### Question 2
 
 *  Calculer l'espérance de la variable aléatoire $W^2$.  
 
 ###### Réponse : 
+
+* 7/30 = 0,2333333333333333
 
 ** **
 
@@ -75,3 +88,5 @@ output: pdf_document
 *  Calculer l'espérance de la variable aléatoire $Z$.  
 
 ###### Réponse : 
+
+* 1/6 = 0,1666666666666667
